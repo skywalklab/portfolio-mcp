@@ -1,4 +1,11 @@
-import type { ClientProject, ProcessStep, Project, Service, TechStack } from './content-types.js';
+import type {
+	ClientProject,
+	ClientService,
+	ProcessStep,
+	Project,
+	Service,
+	TechStack
+} from './content-types.js';
 
 export const clientProjects: ClientProject[] = [
 	{
@@ -550,4 +557,186 @@ export const specializations: string[] = [
 	'Publishing Platforms',
 	'Data Visualization',
 	'Mobile Apps (iOS/Android)'
+];
+
+export const clientServices: ClientService[] = [
+	{
+		category: 'websites',
+		title: 'Custom Web Applications',
+		shortTitle: 'Applications',
+		description: 'Websites that actually perform',
+		longDescription:
+			'Hand-coded websites built for your business—no templates, no page builders. Fast, works on every device, and flexible enough to add features as you grow.',
+		lucide_icon: 'code',
+		benefits: [
+			'Fast-loading, mobile-optimized websites that work on any device',
+			'Easy-to-update content management systems',
+			'Advanced search and filtering to help users find what they need',
+			'Real-time features for interactive experiences',
+			'Scalable architecture that grows with your business'
+		]
+	},
+	{
+		category: 'ai',
+		title: 'AI-Powered Solutions',
+		shortTitle: 'Solutions',
+		description: 'AI that actually does something useful',
+		longDescription:
+			'Chatbots that answer customer questions, tools that generate content, automation that runs while you sleep. Practical AI, not buzzword AI.',
+		lucide_icon: 'brain',
+		benefits: [
+			'AI chat assistants to answer customer questions 24/7',
+			'Automated content generation and writing assistance',
+			'Custom AI integrations with Model Context Protocol (MCP)',
+			'Personalized recommendations for your users',
+			'Workflow automation to reduce manual tasks'
+		]
+	},
+	{
+		category: 'automation',
+		title: 'Workflow Automation',
+		shortTitle: 'Automation',
+		description: 'Stop doing the same thing twice',
+		longDescription:
+			'Connect your apps and automate the repetitive stuff. Social media posting, data syncing, email sequences—workflows that run in the background.',
+		lucide_icon: 'workflow',
+		benefits: [
+			'Social media content creation and posting automation',
+			'AI-powered workflow automation with n8n',
+			'Automated marketing campaigns and email sequences',
+			'Custom automation workflows tailored to your business',
+			'Integration between apps and services',
+			'Scheduled tasks and trigger-based automations'
+		]
+	},
+	{
+		category: 'cms',
+		title: 'Content Management',
+		shortTitle: 'Content',
+		description: 'Update your site without calling us',
+		longDescription:
+			'Edit text, swap images, publish content—all from a dashboard. No developer needed for day-to-day updates.',
+		lucide_icon: 'file-pen',
+		benefits: [
+			'Edit your website content anytime, from anywhere',
+			'Manage multiple languages from one dashboard',
+			'Organize images, videos, and documents efficiently',
+			'Preview changes before publishing',
+			'Flexible publishing workflows for team collaboration'
+		]
+	},
+	{
+		category: 'mobile',
+		title: 'Mobile Apps',
+		shortTitle: 'Mobile',
+		description: 'Apps for iPhone and Android',
+		longDescription:
+			'One codebase, both app stores. Native performance, offline support, push notifications. We handle submission too.',
+		lucide_icon: 'smartphone',
+		benefits: [
+			'One app that works on iPhone and Android',
+			'Works offline with automatic syncing',
+			'Native performance and smooth animations',
+			'Push notifications to engage users',
+			'App store submission and updates'
+		]
+	},
+	{
+		category: 'ecommerce',
+		title: 'E-commerce & Payments',
+		shortTitle: 'E-commerce',
+		description: 'Sell online, get paid',
+		longDescription:
+			'Secure payments, checkout that converts. Products, subscriptions, services—with inventory management and fraud protection.',
+		lucide_icon: 'shopping-cart',
+		benefits: [
+			'Accept credit cards, Apple Pay, and Google Pay',
+			'Manage subscriptions and recurring billing',
+			'Secure checkout process with fraud protection',
+			'Inventory management and order tracking',
+			'Automated invoicing and payment reports'
+		]
+	},
+	{
+		category: 'international',
+		title: 'Multilingual Websites',
+		shortTitle: 'Multilingual',
+		description: 'Your site in multiple languages',
+		longDescription:
+			"Websites that speak your customers' languages. Local SEO, localized content, currency, and date formats—managed from one dashboard.",
+		lucide_icon: 'languages',
+		benefits: [
+			'Support for multiple languages and regions',
+			'Automatic language detection and switching',
+			'Localized content, currency, and date formats',
+			'SEO optimization for each language',
+			'GDPR and privacy compliance built-in'
+		]
+	},
+	// {
+	// 	category: 'education',
+	// 	title: 'Educational Platforms',
+	//  shortTitle: 'Educational',
+	// 	description: 'Tools for schools, universities, and online learning',
+	// 	benefits: [
+	// 		'Student and faculty portals with role-based access',
+	// 		'Assessment and testing tools with automatic grading',
+	// 		'Data analytics and reporting dashboards',
+	// 		'Integration with College Scorecard (U.S. Dept. of Education)',
+	// 		'College Navigator and federal education databases',
+	// 		'Bureau of Labor Statistics career and salary data',
+	// 		'College comparison tools with real outcomes and earnings data',
+	// 		'Collaboration tools for research teams',
+	// 		'Integration with existing systems'
+	// 	]
+	// },
+	// {
+	// 	category: 'wordpress',
+	// 	title: 'WordPress Solutions',
+	// 	description: 'Custom WordPress applications and enterprise plugins',
+	// 	benefits: [
+	// 		'Headless WordPress with modern frontend frameworks',
+	// 		'Custom enterprise-grade WordPress plugins',
+	// 		'Complex licensing and subscription management systems',
+	// 		'WooCommerce online stores with payment processing',
+	// 		'Custom themes and advanced functionality',
+	// 		'WordPress as a headless CMS for React/Next.js apps',
+	// 		'Easy content updates through WordPress',
+	// 		'Ongoing maintenance and security updates'
+	// 	]
+	// },
+	{
+		category: 'marketing',
+		title: 'Marketing & Analytics',
+		shortTitle: 'Marketing',
+		description: "Know what's working",
+		longDescription:
+			'Clear analytics, conversion tracking, audience segmentation. Plus automated email campaigns that actually get opened.',
+		lucide_icon: 'chart-column-increasing',
+		benefits: [
+			'Facebook Pixel and Conversions API for accurate ad tracking',
+			'Google Analytics and Google Tag Manager integration',
+			'Klaviyo email marketing integration and automation',
+			'Conversion tracking across your website and ads',
+			'Analytics dashboards to understand your customers',
+			'Marketing automation workflows',
+			'Email campaign management and segmentation'
+		]
+	},
+	{
+		category: 'performance',
+		title: 'Performance & Hosting',
+		shortTitle: 'Performance',
+		description: 'Fast hosting that scales',
+		longDescription:
+			'Your site stays fast whether you have ten visitors or ten thousand. Optimized code, smart caching, auto-scaling infrastructure.',
+		lucide_icon: 'gauge',
+		benefits: [
+			'Lightning-fast page loads (under 2 seconds)',
+			'99.9% uptime with automatic backups',
+			'Handles traffic spikes without slowing down',
+			'Global content delivery for worldwide speed',
+			'24/7 monitoring and security protection'
+		]
+	}
 ];

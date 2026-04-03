@@ -34,3 +34,13 @@ export interface ProcessStep {
 	description: string;
 	items: string[];
 }
+
+export interface ClientService {
+	category: string;
+	title: string;
+	shortTitle: string;
+	description: string;
+	longDescription: string;
+	benefits: string[];
+	lucide_icon: string;
+}
