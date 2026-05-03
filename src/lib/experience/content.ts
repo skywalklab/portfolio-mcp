@@ -14,10 +14,10 @@ export const clientProjects: ClientProject[] = [
 		description:
 			'A comprehensive platform helping students compare 10,000+ colleges and universities',
 		outcomes: [
-			'Handles millions of data points with instant search results',
-			'Interactive comparison tools and personalized recommendations',
-			'Engaging data visualizations that make complex information accessible',
-			'Scales to serve thousands of concurrent users'
+			'Interactive data visualizations and comparison tools for 10,000+ institutions',
+			'Degree finder integrating BLS and NCES APIs with ROI calculations',
+			'Reduced hero image creation time by 95% with dynamic SVG generator',
+			'Handles millions of data points with instant search results'
 		],
 		results:
 			'Empowering students to make informed decisions about their education with fast, reliable data',
@@ -29,13 +29,13 @@ export const clientProjects: ClientProject[] = [
 		description:
 			'Marketing pages, AI chatbot, administrative tools, and custom MCP server for an academic writing platform',
 		outcomes: [
-			'AI chatbot providing writing guidance and answering user questions',
-			'Custom MCP server for seamless AI integration across the platform',
-			'Automated social media video creation and posting across platforms',
-			'Marketing and informational web pages to attract and onboard users',
-			'Admin dashboards for platform management and analytics',
-			'Secure subscription management with Stripe payment processing',
-			'Integration of AI features (OpenAI, Anthropic Claude) into the platform'
+			'Reduced content creation time by 90% with TypeScript automation pipeline',
+			'Local open-source AI querying YouTube API, generating scripts, creating videos via Pictory API',
+			'Auto-posting to 3 social media platforms',
+			'Custom MCP server enabling AI-powered user support across 2 LLM providers',
+			'Shared component library across 3 Inkwell products ensuring brand consistency',
+			'Admin dashboards with Stripe integration for payment processing and analytics',
+			'Demo videos with Premiere Pro improving onboarding and retention'
 		],
 		results:
 			'Supporting an academic writing platform with intelligent assistance and seamless user experience',
@@ -63,14 +63,13 @@ export const clientProjects: ClientProject[] = [
 		description:
 			'An AI-powered personality assessment platform with custom licensing system and MCP server',
 		outcomes: [
-			'Interactive assessments with AI-powered analysis',
-			'Custom licensing and test key management system (Master Keys plugin)',
-			'Custom MCP server for advanced AI capabilities and integrations',
-			'Professional PDF reports delivered automatically',
-			'AI chat interface for personalized career advice',
-			'Headless WordPress for content management',
-			'Usage tracking and subscription management',
-			'Fast, cached results for thousands of users'
+			'Full-stack platform analyzing 19 personality traits',
+			'Reduced page load times by 60% with Redis caching and query optimization',
+			'Expanded offerings by 400% (2 to 10 PDF reports) with automated generation',
+			'Custom MCP server integrating test results with LLMs for personalized feedback',
+			'Euclidean distance algorithms matching personality profiles to career paths',
+			'Master Keys WordPress plugin for enterprise group testing',
+			'99.9% uptime with GCE, Nginx, Redis, and MySQL optimization'
 		],
 		results:
 			'Helping individuals discover career paths with enterprise-grade licensing and AI analysis',
@@ -324,12 +323,14 @@ export const projects: Project[] = [
 		tagline: 'Comprehensive Component Library',
 		description: 'Agency-wide reusable Svelte 5 components across all Skywalk Lab projects',
 		features: [
-			'9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
+			'61+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
+			'Custom Vite plugins (SEO, icons, vendor)',
+			'Multi-stage Docker builds',
 			'Actions, utilities, CSS modules, i18n support',
 			'GSAP animations, Sentry tracking',
-			'Private GitHub npm registry with automated versioning (v0.8.390+)'
+			'Private GitHub npm registry with automated versioning'
 		],
-		tech: ['Svelte 5', 'TypeScript', 'GSAP', 'Paraglide i18n'],
+		tech: ['Svelte 5', 'TypeScript', 'Vite', 'GSAP', 'Paraglide i18n', 'Docker'],
 		results: '40%+ faster development, consistent UX across client sites',
 		isNew: true
 	},
@@ -355,11 +356,12 @@ export const projects: Project[] = [
 		tagline: 'Comprehensive Academic Intelligence Platform',
 		description: 'Large-scale academic ranking and data platform with millions of data points',
 		features: [
-			'10,000+ institutions, millions of citations and rankings',
-			'Interactive college comparison, degree finders, biographical timelines',
+			'Interactive data visualizations and comparison tools for 10,000+ institutions',
+			'Degree finder tool integrating BLS and NCES APIs with ROI calculations',
+			'Reduced hero image creation time by 95% with dynamic SVG-based generator for thousands of pages',
 			'Complex data visualization and sports data'
 		],
-		tech: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'data pipelines'],
+		tech: ['Nunjucks', 'SASS', 'TypeScript', 'PostgreSQL', 'Webpack', 'Express'],
 		results: 'Handles massive datasets with sub-second query times'
 	},
 	{
@@ -368,14 +370,15 @@ export const projects: Project[] = [
 		description:
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
 		features: [
-			'Real-time collaborative editing',
-			'Custom MCP server (inkwell-mcp) for AI integrations',
-			'Citation management',
-			'AI writing assistance',
-			'PDF, LaTeX, DOCX, Typst conversion pipelines',
-			'OpenAI, Anthropic Claude, Stripe subscriptions, Google Cloud Storage'
+			'Reduced content creation time by 90% with TypeScript automation pipeline using local open-source AI',
+			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
+			'Auto-posting to 3 social media platforms',
+			'Custom MCP server enabling AI-powered user support across 2 LLM providers',
+			'Shared component library used across 3 Inkwell products (Inkwell, Press, Publishers)',
+			'Admin dashboards with Stripe integration for payment processing and analytics',
+			'PDF, LaTeX, DOCX, Typst conversion pipelines'
 		],
-		tech: ['SvelteKit 5', 'ProseMirror', 'PostgreSQL', 'WebSockets', 'AI APIs', 'MCP'],
+		tech: ['SvelteKit 5', 'TypeScript', 'SASS', 'MCP', 'Stripe', 'YouTube API', 'Pictory API'],
 		results: 'Enables scholars to write, cite, and publish with AI-powered tools'
 	},
 	{
@@ -384,25 +387,28 @@ export const projects: Project[] = [
 		description:
 			'AI-powered assessment platform with custom licensing system, MCP server, and headless WordPress',
 		features: [
-			'Interactive personality assessments',
-			'Custom WordPress plugin: Master Keys licensing and subscription management',
-			'License key generation, validation, usage tracking, and expiration management',
-			'TypeScript admin interface for key management',
-			'Custom MCP server (success-portraits-mcp) for AI capabilities',
-			'AI-powered career analysis',
-			'PDF report generation with Puppeteer',
-			'Anthropic Claude and OpenAI for chat and analysis',
-			'Headless WordPress with Next.js frontend'
+			'Full-stack personality test platform analyzing 19 traits',
+			'Reduced page load times by 60% with Redis caching and database query optimization',
+			'Expanded product offerings by 400% (from 2 to 10 PDF reports) with automated PDF generation',
+			'Mapped personality traits to ONET work styles for career matching',
+			'Custom MCP server integrating test results with LLMs for personalized feedback',
+			'Euclidean distance algorithms to match user personality profiles with career paths',
+			'Custom WordPress plugin with "master keys" system for enterprise group testing',
+			'99.9% uptime with GCE VMs, Nginx, Redis caching, and MySQL optimization'
 		],
 		tech: [
 			'Next.js',
-			'WordPress',
+			'TypeScript',
 			'PostgreSQL',
+			'Docker',
+			'GKE',
 			'Redis',
-			'Puppeteer',
-			'Material-UI',
+			'PHP',
+			'MySQL',
+			'Nginx',
+			'GCE',
 			'MCP',
-			'TypeScript'
+			'Puppeteer'
 		],
 		results:
 			'Enterprise-grade career assessment platform with advanced licensing and AI capabilities'
@@ -436,11 +442,11 @@ export const projects: Project[] = [
 export const techStack: TechStack[] = [
 	{
 		category: 'Frontend',
-		technologies: ['SvelteKit 5', 'React 19', 'Next.js 15', 'TypeScript']
+		technologies: ['SvelteKit 5', 'React 19', 'Next.js 15', 'TypeScript', 'SASS', 'Vite', 'GSAP', 'Three.js', 'Webpack', 'Nunjucks']
 	},
 	{
 		category: 'Backend',
-		technologies: ['Node.js', 'Express', 'PostgreSQL']
+		technologies: ['Node.js', 'Express', 'PostgreSQL', 'PHP', 'Redis', 'MySQL', 'MongoDB', 'GraphQL', 'REST APIs', 'Zod']
 	},
 	{
 		category: 'CMS',
@@ -452,7 +458,7 @@ export const techStack: TechStack[] = [
 	},
 	{
 		category: 'AI/ML',
-		technologies: ['OpenAI', 'Anthropic Claude', 'MCP']
+		technologies: ['OpenAI', 'Anthropic Claude', 'MCP', 'Ollama', 'n8n']
 	},
 	{
 		category: 'Payments',
@@ -460,11 +466,15 @@ export const techStack: TechStack[] = [
 	},
 	{
 		category: 'Cloud',
-		technologies: ['Google Cloud Platform', 'AWS']
+		technologies: ['Google Cloud Platform', 'GCE', 'GKE', 'AWS', 'Cloudflare Pages']
 	},
 	{
 		category: 'Deployment',
-		technologies: ['Docker', 'Kubernetes', 'Netlify']
+		technologies: ['Git', 'Docker', 'Kubernetes', 'Netlify', 'Nginx']
+	},
+	{
+		category: 'Tools',
+		technologies: ['Puppeteer', 'Sentry', 'Photoshop', 'Premiere Pro']
 	},
 	{
 		category: 'Internationalization',
