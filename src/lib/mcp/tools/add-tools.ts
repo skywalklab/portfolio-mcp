@@ -1,10 +1,85 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import path from 'node:path';
+import fs from 'node:fs';
+import pdf2md from '@opendocsg/pdf2md';
 import { QuerySchema } from '../schema.js';
+import {
+	clientProjects,
+	projects,
+	services,
+	clientServices,
+	techStack,
+	clientSpecializations,
+	specializations,
+	education
+} from '../../experience/content.js';
 
-const get_experience_tool = [
-	'get_experience',
+const get_cv_tool = [
+	'get_cv',
 	{
-		description: "Get Tommy Doak's experience (e.g., work history, projects, etc.)",
+		description: "Get Tommy Doak's CV",
+		inputSchema: {
+			query: QuerySchema
+		}
+	},
+	async (args: any) => {
+		const filePath = path.resolve(import.meta.dirname, '../../experience/cv.pdf');
+		const pdfBuffer = fs.readFileSync(filePath);
+		const pdfMarkdown = await pdf2md.default(pdfBuffer);
+
+		return {
+			content: [
+				{
+					type: 'text' as const,
+					text: pdfMarkdown
+				}
+			]
+		};
+	}
+] as const;
+
+const get_full_experience_tool = [
+	'get_full_experience',
+	{
+		description: "Get Tommy Doak's full experience (e.g., work history, projects, etc.)",
+		inputSchema: {
+			query: QuerySchema
+		}
+	},
+	async (args: any) => {
+		const filePath = path.resolve(import.meta.dirname, '../../linkedin-positions.csv');
+		const csv = fs.readFileSync(filePath, 'utf-8');
+		const table = csv.split('\n');
+		const headers = table[0]!.split(',');
+
+		const normalizeCell = (header: string, cell: string): string =>
+			header === 'Location' && cell === '' ? 'Remote' : cell;
+
+		return {
+			content: [
+				{
+					type: 'text' as const,
+					text:
+						'# Full Work Experience\n\n' +
+						table
+							.slice(1)
+							.map((row) =>
+								row
+									.split(',')
+									.map((cell, i) => `${headers[1]}: ${normalizeCell(headers[i]!, cell)}`)
+									.join('\n')
+							)
+							.join('\n\n')
+				}
+			]
+		};
+	}
+] as const;
+
+const get_dev_experience_tool = [
+	'get_dev_experience',
+	{
+		description: "Get Tommy Doak's dev experience (e.g., work history, projects, etc.)",
 		inputSchema: {
 			query: QuerySchema
 		}
@@ -22,19 +97,29 @@ const get_experience_tool = [
 const get_skills_tool = [
 	'get_skills',
 	{
-		description: "Get Tommy Doak's skills (e.g., tech stack, proficiency levels, etc.)",
+		description:
+			"Get Tommy Doak's tech stack organized by category (Frontend, Backend, CMS, Mobile, AI/ML, etc.)",
 		inputSchema: {
 			query: QuerySchema
 		}
 	},
-	(args: any) => ({
-		content: [
-			{
-				type: 'text' as const,
-				text: ''
-			}
-		]
-	}) // tool
+	(args: any) => {
+		return {
+			content: [
+				{
+					type: 'text' as const,
+					text:
+						'# Skills\n\n' +
+						techStack
+							.map(
+								(stack) =>
+									`**${stack.category}**:\n${stack.technologies.map((tech) => `- ${tech}`).join('\n')}`
+							)
+							.join('\n\n')
+				}
+			]
+		};
+	}
 ] as const;
 
 const get_portfolio_tool = [
@@ -90,7 +175,9 @@ const get_contact_info_tool = [
 ] as const;
 
 export const addTools = (server: McpServer) => {
-	server.registerTool(...get_experience_tool);
+	server.registerTool(...get_cv_tool);
+	server.registerTool(...get_full_experience_tool);
+	server.registerTool(...get_dev_experience_tool);
 	server.registerTool(...get_skills_tool);
 	server.registerTool(...get_portfolio_tool);
 	server.registerTool(...get_education_tool);

@@ -21,6 +21,7 @@ export interface Project {
 	features: string[];
 	tech: string[];
 	results: string;
+	url?: string;
 	isNew?: boolean;
 }
 
@@ -43,4 +44,11 @@ export interface ClientService {
 	longDescription: string;
 	benefits: string[];
 	lucide_icon: string;
+}
+
+export interface Education {
+	degree: string;
+	institution: string;
+	years: string;
+	honors?: string[];
 }

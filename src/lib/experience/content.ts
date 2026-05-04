@@ -1,11 +1,12 @@
 import type {
 	ClientProject,
 	ClientService,
+	Education,
 	ProcessStep,
 	Project,
 	Service,
 	TechStack
-} from './content-types.js';
+} from './types.js';
 
 export const clientProjects: ClientProject[] = [
 	{
@@ -304,20 +305,20 @@ export const services: Service[] = [
 ];
 
 export const projects: Project[] = [
-	{
-		name: 'Charlotte Voixoff',
-		tagline: 'Headless CMS Monorepo',
-		description: 'Modern decoupled architecture with Payload CMS backend and SvelteKit frontend',
-		features: [
-			'Monorepo with separate CMS and website apps',
-			'GraphQL API',
-			'Lexical editor',
-			'Paraglide i18n for multi-language support'
-		],
-		tech: ['Next.js 15', 'SvelteKit 5', 'Payload CMS 3.0', 'PostgreSQL', 'npm workspaces'],
-		results: 'Modern decoupled architecture with type-safe content management',
-		isNew: true
-	},
+	// {
+	// 	name: 'Charlotte Voixoff',
+	// 	tagline: 'Headless CMS Monorepo',
+	// 	description: 'Modern decoupled architecture with Payload CMS backend and SvelteKit frontend',
+	// 	features: [
+	// 		'Monorepo with separate CMS and website apps',
+	// 		'GraphQL API',
+	// 		'Lexical editor',
+	// 		'Paraglide i18n for multi-language support'
+	// 	],
+	// 	tech: ['Next.js 15', 'SvelteKit 5', 'Payload CMS 3.0', 'PostgreSQL', 'npm workspaces'],
+	// 	results: 'Modern decoupled architecture with type-safe content management',
+	// 	isNew: true
+	// },
 	{
 		name: '@skywalklab/lib',
 		tagline: 'Comprehensive Component Library',
@@ -349,7 +350,8 @@ export const projects: Project[] = [
 		],
 		tech: ['Svelte 5', 'TypeScript', 'npm workspaces', 'automated publishing'],
 		results:
-			'Unified ecosystem enabling consistent UX and faster development across all Inkwell properties'
+			'Unified ecosystem enabling consistent UX and faster development across all Inkwell properties',
+		url: 'https://press.inkwell.net'
 	},
 	{
 		name: 'Academic Influence',
@@ -362,7 +364,8 @@ export const projects: Project[] = [
 			'Complex data visualization and sports data'
 		],
 		tech: ['Nunjucks', 'SASS', 'TypeScript', 'PostgreSQL', 'Webpack', 'Express'],
-		results: 'Handles massive datasets with sub-second query times'
+		results: 'Handles massive datasets with sub-second query times',
+		url: 'https://academicinfluence.com'
 	},
 	{
 		name: 'Inkwell',
@@ -379,7 +382,8 @@ export const projects: Project[] = [
 			'PDF, LaTeX, DOCX, Typst conversion pipelines'
 		],
 		tech: ['SvelteKit 5', 'TypeScript', 'SASS', 'MCP', 'Stripe', 'YouTube API', 'Pictory API'],
-		results: 'Enables scholars to write, cite, and publish with AI-powered tools'
+		results: 'Enables scholars to write, cite, and publish with AI-powered tools',
+		url: 'https://inkwell.net'
 	},
 	{
 		name: 'Success Portraits',
@@ -411,7 +415,8 @@ export const projects: Project[] = [
 			'Puppeteer'
 		],
 		results:
-			'Enterprise-grade career assessment platform with advanced licensing and AI capabilities'
+			'Enterprise-grade career assessment platform with advanced licensing and AI capabilities',
+		url: 'https://successportraits.com'
 	},
 	{
 		name: 'Nuisiout',
@@ -423,7 +428,8 @@ export const projects: Project[] = [
 			'Structured data markup, schema.org implementation'
 		],
 		tech: ['SvelteKit', '@skywalklab/lib', 'Netlify'],
-		results: 'Fast, SEO-optimized site with strong local search visibility'
+		results: 'Fast, SEO-optimized site with strong local search visibility',
+		url: 'https://nuisiout.fr'
 	},
 	{
 		name: 'College Compare Mobile App',
@@ -442,11 +448,33 @@ export const projects: Project[] = [
 export const techStack: TechStack[] = [
 	{
 		category: 'Frontend',
-		technologies: ['SvelteKit 5', 'React 19', 'Next.js 15', 'TypeScript', 'SASS', 'Vite', 'GSAP', 'Three.js', 'Webpack', 'Nunjucks']
+		technologies: [
+			'SvelteKit 5',
+			'React 19',
+			'Next.js 15',
+			'TypeScript',
+			'SASS',
+			'Vite',
+			'GSAP',
+			'Three.js',
+			'Webpack',
+			'Nunjucks'
+		]
 	},
 	{
 		category: 'Backend',
-		technologies: ['Node.js', 'Express', 'PostgreSQL', 'PHP', 'Redis', 'MySQL', 'MongoDB', 'GraphQL', 'REST APIs', 'Zod']
+		technologies: [
+			'Node.js',
+			'Express',
+			'PostgreSQL',
+			'PHP',
+			'Redis',
+			'MySQL',
+			'MongoDB',
+			'GraphQL',
+			'REST APIs',
+			'Zod'
+		]
 	},
 	{
 		category: 'CMS',
@@ -683,38 +711,45 @@ export const clientServices: ClientService[] = [
 			'GDPR and privacy compliance built-in'
 		]
 	},
-	// {
-	// 	category: 'education',
-	// 	title: 'Educational Platforms',
-	//  shortTitle: 'Educational',
-	// 	description: 'Tools for schools, universities, and online learning',
-	// 	benefits: [
-	// 		'Student and faculty portals with role-based access',
-	// 		'Assessment and testing tools with automatic grading',
-	// 		'Data analytics and reporting dashboards',
-	// 		'Integration with College Scorecard (U.S. Dept. of Education)',
-	// 		'College Navigator and federal education databases',
-	// 		'Bureau of Labor Statistics career and salary data',
-	// 		'College comparison tools with real outcomes and earnings data',
-	// 		'Collaboration tools for research teams',
-	// 		'Integration with existing systems'
-	// 	]
-	// },
-	// {
-	// 	category: 'wordpress',
-	// 	title: 'WordPress Solutions',
-	// 	description: 'Custom WordPress applications and enterprise plugins',
-	// 	benefits: [
-	// 		'Headless WordPress with modern frontend frameworks',
-	// 		'Custom enterprise-grade WordPress plugins',
-	// 		'Complex licensing and subscription management systems',
-	// 		'WooCommerce online stores with payment processing',
-	// 		'Custom themes and advanced functionality',
-	// 		'WordPress as a headless CMS for React/Next.js apps',
-	// 		'Easy content updates through WordPress',
-	// 		'Ongoing maintenance and security updates'
-	// 	]
-	// },
+	{
+		category: 'education',
+		title: 'Educational Platforms',
+		shortTitle: 'Educational',
+		description: 'Tools for schools, universities, and online learning',
+		longDescription:
+			'Portals, assessments, and analytics for academic institutions. Integrated with federal education data for real outcomes.',
+		lucide_icon: 'graduation-cap',
+		benefits: [
+			'Student and faculty portals with role-based access',
+			'Assessment and testing tools with automatic grading',
+			'Data analytics and reporting dashboards',
+			'Integration with College Scorecard (U.S. Dept. of Education)',
+			'College Navigator and federal education databases',
+			'Bureau of Labor Statistics career and salary data',
+			'College comparison tools with real outcomes and earnings data',
+			'Collaboration tools for research teams',
+			'Integration with existing systems'
+		]
+	},
+	{
+		category: 'wordpress',
+		title: 'WordPress Solutions',
+		shortTitle: 'WordPress',
+		description: 'Custom WordPress applications and enterprise plugins',
+		longDescription:
+			'Enterprise plugins, headless setups, and WooCommerce stores. Full control with easy content updates.',
+		lucide_icon: 'blocks',
+		benefits: [
+			'Headless WordPress with modern frontend frameworks',
+			'Custom enterprise-grade WordPress plugins',
+			'Complex licensing and subscription management systems',
+			'WooCommerce online stores with payment processing',
+			'Custom themes and advanced functionality',
+			'WordPress as a headless CMS for React/Next.js apps',
+			'Easy content updates through WordPress',
+			'Ongoing maintenance and security updates'
+		]
+	},
 	{
 		category: 'marketing',
 		title: 'Marketing & Analytics',
@@ -748,5 +783,19 @@ export const clientServices: ClientService[] = [
 			'Global content delivery for worldwide speed',
 			'24/7 monitoring and security protection'
 		]
+	}
+];
+
+export const education: Education[] = [
+	{
+		degree: 'Advanced Masters in Digital Strategy Management',
+		institution: 'Grenoble Ecole de Management',
+		years: "'20 - '21",
+		honors: ['2021 Best Dissertation Winner']
+	},
+	{
+		degree: 'B.S. in Marketing',
+		institution: 'University of Georgia',
+		years: "'08 - '12"
 	}
 ];
