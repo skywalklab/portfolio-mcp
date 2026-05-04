@@ -1,5 +1,7 @@
 import fs from 'node:fs';
-import pdf2md from '@opendocsg/pdf2md';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const pdf2md = require('@opendocsg/pdf2md');
 import {
 	formatContactInfo,
 	formatCSV,
@@ -13,26 +15,30 @@ import type { ToolOutput } from './types.js';
 import { getExpFilePath, toolOutput } from './utils.js';
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
 
-export function full_experience_tool({ fileName }: { fileName: string }): ToolOutput {
+export async function full_experience_tool({
+	fileName
+}: {
+	fileName: string;
+}): Promise<ToolOutput> {
 	const filePath = getExpFilePath(fileName);
 	const csv = fs.readFileSync(filePath, 'utf-8');
 
-	const content = toolOutput('# Full Work Experience\n\n' + formatCSV(csv));
+	const content = toolOutput('# Full Work Experience\n\n' + (await formatCSV(csv)));
 	return content;
 }
 
-export function education_tool({ fileName }: { fileName: string }): ToolOutput {
+export async function education_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
 	const filePath = getExpFilePath(fileName);
 	const csv = fs.readFileSync(filePath, 'utf-8');
 
-	const content = toolOutput('# Education\n\n' + formatCSV(csv));
+	const content = toolOutput('# Education\n\n' + (await formatCSV(csv)));
 	return content;
 }
 
 export async function cv_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
 	const filePath = getExpFilePath(fileName);
 	const pdfBuffer = fs.readFileSync(filePath);
-	const pdfMarkdown = await pdf2md.default(pdfBuffer);
+	const pdfMarkdown = await pdf2md(pdfBuffer);
 
 	const content = toolOutput(pdfMarkdown);
 	return content;

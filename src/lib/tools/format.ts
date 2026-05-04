@@ -1,15 +1,13 @@
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
+import { processCsvFile } from './utils.js';
 
-export function formatCSV(csv: string, maxRows?: number): string {
-	const rows = csv.split('\n');
-	const headers = rows[0]!.split(',');
-	const bodyRows = rows.slice(1, maxRows ?? rows.length);
+export async function formatCSV(csv: string, maxRows?: number): Promise<string> {
+	const rows = await processCsvFile(csv);
 
-	return bodyRows
+	return rows
 		.map((row) =>
-			row
-				.split(',')
-				.map((cell, i) => `${headers[1]}: ${cell}`)
+			Object.entries(row)
+				.map(([key, value]) => `**${key}**: ${value}`)
 				.join('\n')
 		)
 		.join('\n\n');
@@ -31,7 +29,7 @@ export function formatContactInfo(contactInfo: ContactInfo): string {
 	return (
 		'# Contact\n\n' +
 		Object.entries(contactInfo)
-			.map(([key, value]) => `**${key}**: ${value}}`)
+			.map(([key, value]) => `**${key}**: ${value}`)
 			.join('\n')
 	);
 }

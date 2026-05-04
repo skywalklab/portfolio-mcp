@@ -32,7 +32,8 @@ const get_cv_tool = [
 const get_full_experience_tool = [
 	'get_full_experience',
 	{
-		description: "Get Tommy Doak's full experience (e.g., work history, projects, etc.)",
+		description:
+			"Get Tommy Doak's full work history including non-dev roles (Alaska, Antarctica, teaching, sales)",
 		inputSchema: {
 			query: QuerySchema
 		}
@@ -44,7 +45,7 @@ const get_dev_experience_tool = [
 	'get_dev_experience',
 	{
 		description:
-			"Get Tommy Doak's dev experience: technical services/capabilities, specializations, and development process/workflow",
+			"Get Tommy Doak's dev experience: dev positions, technical capabilities, focus areas, and development approach",
 		inputSchema: {
 			query: QuerySchema
 		}
@@ -73,7 +74,8 @@ const get_skills_tool = [
 const get_portfolio_tool = [
 	'get_portfolio',
 	{
-		description: "Get Tommy Doak's portfolio (e.g., project descriptions, links, screenshots etc.)",
+		description:
+			"Get Tommy Doak's featured projects: descriptions, tech stack, results, and links",
 		inputSchema: {
 			query: QuerySchema
 		}
@@ -84,7 +86,7 @@ const get_portfolio_tool = [
 const get_education_tool = [
 	'get_education',
 	{
-		description: "Get Tommy Doak's education",
+		description: "Get Tommy Doak's education: degrees, institutions, and honors",
 		inputSchema: {
 			query: QuerySchema
 		}
@@ -95,7 +97,8 @@ const get_education_tool = [
 const get_contact_info_tool = [
 	'get_contact_info',
 	{
-		description: "Get Tommy Doak's contact info",
+		description:
+			"Get Tommy Doak's contact info: email, phone, LinkedIn, GitHub, and website",
 		query: QuerySchema
 	},
 	(args: any) => contact_info_tool({ contactInfo })
