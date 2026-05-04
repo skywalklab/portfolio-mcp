@@ -21,8 +21,7 @@ export const clientProjects: ClientProject[] = [
 			'Handles millions of data points with instant search results'
 		],
 		results:
-			'Empowering students to make informed decisions about their education with fast, reliable data',
-		isNew: false
+			'Empowering students to make informed decisions about their education with fast, reliable data'
 	},
 	{
 		name: 'Inkwell',
@@ -39,8 +38,7 @@ export const clientProjects: ClientProject[] = [
 			'Demo videos with Premiere Pro improving onboarding and retention'
 		],
 		results:
-			'Supporting an academic writing platform with intelligent assistance and seamless user experience',
-		isNew: false
+			'Supporting an academic writing platform with intelligent assistance and seamless user experience'
 	},
 	{
 		name: 'Inkwell Press & Studio',
@@ -55,8 +53,7 @@ export const clientProjects: ClientProject[] = [
 			'Unified user experience across the entire Inkwell ecosystem'
 		],
 		results:
-			'Enabling rapid development and consistent quality across multiple publishing applications',
-		isNew: false
+			'Enabling rapid development and consistent quality across multiple publishing applications'
 	},
 	{
 		name: 'Success Portraits',
@@ -73,8 +70,7 @@ export const clientProjects: ClientProject[] = [
 			'99.9% uptime with GCE, Nginx, Redis, and MySQL optimization'
 		],
 		results:
-			'Helping individuals discover career paths with enterprise-grade licensing and AI analysis',
-		isNew: false
+			'Helping individuals discover career paths with enterprise-grade licensing and AI analysis'
 	},
 	{
 		name: 'Nuisiout',
@@ -87,8 +83,7 @@ export const clientProjects: ClientProject[] = [
 			'Blog for SEO and customer education',
 			'Fast loading and mobile-friendly design'
 		],
-		results: 'Increased online visibility and customer inquiries through SEO optimization',
-		isNew: false
+		results: 'Increased online visibility and customer inquiries through SEO optimization'
 	},
 	{
 		name: 'College Compare App',
@@ -100,8 +95,7 @@ export const clientProjects: ClientProject[] = [
 			'Native-feeling UI with smooth performance',
 			'Push notifications for updates'
 		],
-		results: 'Students can research colleges on-the-go with a native mobile experience',
-		isNew: false
+		results: 'Students can research colleges on-the-go with a native mobile experience'
 	}
 ];
 

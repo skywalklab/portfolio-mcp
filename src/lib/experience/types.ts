@@ -4,7 +4,6 @@ export interface ClientProject {
 	description: string;
 	outcomes: string[];
 	results: string;
-	isNew?: boolean;
 }
 
 export interface Service {
