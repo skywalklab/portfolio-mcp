@@ -5,7 +5,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { isInitializeRequest } from '@modelcontextprotocol/sdk/types.js';
 import 'dotenv/config';
-import { addTools } from './tools/add-tools.js';
+import { addTools } from './lib/tools/add-tools.js';
 
 const app = express();
 app.use(express.json());

@@ -9,15 +9,9 @@ import {
 	formatSkills,
 	formatSpecializations
 } from './format.js';
-import type { ToolOutput } from '../types.js';
+import type { ToolOutput } from './types.js';
 import { getExpFilePath, toolOutput } from './utils.js';
-import type {
-	ContactInfo,
-	ProcessStep,
-	Project,
-	Service,
-	TechStack
-} from '../../experience/types.js';
+import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
 
 export function full_experience_tool({ fileName }: { fileName: string }): ToolOutput {
 	const filePath = getExpFilePath(fileName);

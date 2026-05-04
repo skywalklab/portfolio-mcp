@@ -1,5 +1,5 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { QuerySchema } from '../schema.js';
+import { QuerySchema } from './schema.js';
 import {
 	projects,
 	services,
@@ -7,7 +7,7 @@ import {
 	specializations,
 	contactInfo,
 	processSteps
-} from '../../experience/content.js';
+} from '../experience/content.js';
 import {
 	contact_info_tool,
 	cv_tool,

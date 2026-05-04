@@ -1,6 +1,6 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { addTools } from './tools/add-tools.js';
+import { addTools } from './lib/tools/add-tools.js';
 
 const server = new McpServer({
 	name: 'portfolio_mcp_server',

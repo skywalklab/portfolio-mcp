@@ -1,10 +1,4 @@
-import type {
-	ContactInfo,
-	ProcessStep,
-	Project,
-	Service,
-	TechStack
-} from '../../experience/types.js';
+import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
 
 export function formatCSV(csv: string, maxRows?: number): string {
 	const rows = csv.split('\n');
