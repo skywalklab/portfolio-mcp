@@ -17,14 +17,16 @@ export function full_experience_tool({ fileName }: { fileName: string }): ToolOu
 	const filePath = getExpFilePath(fileName);
 	const csv = fs.readFileSync(filePath, 'utf-8');
 
-	return toolOutput('# Full Work Experience\n\n' + formatCSV(csv));
+	const content = toolOutput('# Full Work Experience\n\n' + formatCSV(csv));
+	return content;
 }
 
 export function education_tool({ fileName }: { fileName: string }): ToolOutput {
 	const filePath = getExpFilePath(fileName);
 	const csv = fs.readFileSync(filePath, 'utf-8');
 
-	return toolOutput('# Education\n\n' + formatCSV(csv));
+	const content = toolOutput('# Education\n\n' + formatCSV(csv));
+	return content;
 }
 
 export async function cv_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
@@ -32,19 +34,23 @@ export async function cv_tool({ fileName }: { fileName: string }): Promise<ToolO
 	const pdfBuffer = fs.readFileSync(filePath);
 	const pdfMarkdown = await pdf2md.default(pdfBuffer);
 
-	return toolOutput(pdfMarkdown);
+	const content = toolOutput(pdfMarkdown);
+	return content;
 }
 
 export function skills_tool({ techStack }: { techStack: TechStack[] }): ToolOutput {
-	return toolOutput(formatSkills(techStack));
+	const content = toolOutput(formatSkills(techStack));
+	return content;
 }
 
 export function contact_info_tool({ contactInfo }: { contactInfo: ContactInfo }): ToolOutput {
-	return toolOutput(formatContactInfo(contactInfo));
+	const content = toolOutput(formatContactInfo(contactInfo));
+	return content;
 }
 
 export function portfolio_tool({ projects }: { projects: Project[] }): ToolOutput {
-	return toolOutput(formatProjects(projects));
+	const content = toolOutput(formatProjects(projects));
+	return content;
 }
 
 export function dev_experience_tool({
@@ -66,7 +72,7 @@ export function dev_experience_tool({
 	const formattedServices = formatServices(services);
 	const formattedProcessSteps = formatProcessSteps(processSteps);
 
-	return toolOutput(
+	const content = toolOutput(
 		formattedExp +
 			'\n\n' +
 			formattedSpecializations +
@@ -75,4 +81,5 @@ export function dev_experience_tool({
 			'\n\n' +
 			formattedProcessSteps
 	);
+	return content;
 }
