@@ -1,7 +1,7 @@
 import type {
 	ClientProject,
 	ClientService,
-	Education,
+	ContactInfo,
 	ProcessStep,
 	Project,
 	Service,
@@ -202,19 +202,6 @@ export const services: Service[] = [
 		]
 	},
 	{
-		category: 'publishing',
-		title: 'Publishing & Document Management',
-		description: 'Professional document processing and collaboration',
-		items: [
-			'Academic writing platforms with real-time collaboration',
-			'Citation management (BibLaTeX, CSL, Chicago, APA)',
-			'Document conversion (PDF, LaTeX, DOCX, Typst, Markdown)',
-			'Rich text editing with ProseMirror and Lexical',
-			'Automated PDF generation and templating (Puppeteer)',
-			'Typography and layout systems'
-		]
-	},
-	{
 		category: 'mobile',
 		title: 'Cross-Platform Mobile Development',
 		description: 'Native apps from a single codebase',
@@ -311,7 +298,6 @@ export const projects: Project[] = [
 	// 	],
 	// 	tech: ['Next.js 15', 'SvelteKit 5', 'Payload CMS 3.0', 'PostgreSQL', 'npm workspaces'],
 	// 	results: 'Modern decoupled architecture with type-safe content management',
-	// 	isNew: true
 	// },
 	{
 		name: '@skywalklab/lib',
@@ -326,8 +312,7 @@ export const projects: Project[] = [
 			'Private GitHub npm registry with automated versioning'
 		],
 		tech: ['Svelte 5', 'TypeScript', 'Vite', 'GSAP', 'Paraglide i18n', 'Docker'],
-		results: '40%+ faster development, consistent UX across client sites',
-		isNew: true
+		results: '40%+ faster development, consistent UX across client sites'
 	},
 	{
 		name: 'Inkwell Press & Studio',
@@ -372,8 +357,7 @@ export const projects: Project[] = [
 			'Auto-posting to 3 social media platforms',
 			'Custom MCP server enabling AI-powered user support across 2 LLM providers',
 			'Shared component library used across 3 Inkwell products (Inkwell, Press, Publishers)',
-			'Admin dashboards with Stripe integration for payment processing and analytics',
-			'PDF, LaTeX, DOCX, Typst conversion pipelines'
+			'Admin dashboards with Stripe integration for payment processing and analytics'
 		],
 		tech: ['SvelteKit 5', 'TypeScript', 'SASS', 'MCP', 'Stripe', 'YouTube API', 'Pictory API'],
 		results: 'Enables scholars to write, cite, and publish with AI-powered tools',
@@ -571,8 +555,7 @@ export const processSteps: ProcessStep[] = [
 			'Containerization with Docker',
 			'Kubernetes orchestration',
 			'Infrastructure as code',
-			'Component library publishing automation',
-			'Automated backups and disaster recovery'
+			'Component library publishing automation'
 		]
 	}
 ];
@@ -585,7 +568,6 @@ export const specializations: string[] = [
 	'Workflow Automation (n8n)',
 	'Marketing & Analytics (Facebook CAPI, Klaviyo)',
 	'Academic Technology',
-	'Document Processing',
 	'Publishing Platforms',
 	'Data Visualization',
 	'Mobile Apps (iOS/Android)'
@@ -780,16 +762,14 @@ export const clientServices: ClientService[] = [
 	}
 ];
 
-export const education: Education[] = [
-	{
-		degree: 'Advanced Masters in Digital Strategy Management',
-		institution: 'Grenoble Ecole de Management',
-		years: "'20 - '21",
-		honors: ['2021 Best Dissertation Winner']
-	},
-	{
-		degree: 'B.S. in Marketing',
-		institution: 'University of Georgia',
-		years: "'08 - '12"
-	}
-];
+export const contactInfo: ContactInfo = {
+	name: 'Thomas Doak',
+	preferredName: 'Tommy',
+	phone: '+33751237794',
+	email: 'tommy.doak@skywalklab.com',
+	linkedin: 'https://www.linkedin.com/in/tommydoak/',
+	website: 'https://skywalklab.com',
+	hireMeWebsite: 'https://skywalklab.com/hire-tommy-doak',
+	professionalGithub: 'https://github.com/skywalklab',
+	personalGithub: 'https://github.com/theantidoak'
+};

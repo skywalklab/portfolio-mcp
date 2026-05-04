@@ -21,7 +21,6 @@ export interface Project {
 	tech: string[];
 	results: string;
 	url?: string;
-	isNew?: boolean;
 }
 
 export interface TechStack {
@@ -45,9 +44,14 @@ export interface ClientService {
 	lucide_icon: string;
 }
 
-export interface Education {
-	degree: string;
-	institution: string;
-	years: string;
-	honors?: string[];
+export interface ContactInfo {
+	name: string;
+	preferredName: string;
+	phone: string;
+	email: string;
+	linkedin: string;
+	website: string;
+	hireMeWebsite: string;
+	professionalGithub: string;
+	personalGithub: string;
 }

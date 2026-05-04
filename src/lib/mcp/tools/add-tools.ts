@@ -1,18 +1,22 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import path from 'node:path';
-import fs from 'node:fs';
-import pdf2md from '@opendocsg/pdf2md';
 import { QuerySchema } from '../schema.js';
 import {
-	clientProjects,
 	projects,
 	services,
-	clientServices,
 	techStack,
-	clientSpecializations,
 	specializations,
-	education
+	contactInfo,
+	processSteps
 } from '../../experience/content.js';
+import {
+	contact_info_tool,
+	cv_tool,
+	dev_experience_tool,
+	education_tool,
+	full_experience_tool,
+	portfolio_tool,
+	skills_tool
+} from './tools.js';
 
 const get_cv_tool = [
 	'get_cv',
@@ -22,20 +26,7 @@ const get_cv_tool = [
 			query: QuerySchema
 		}
 	},
-	async (args: any) => {
-		const filePath = path.resolve(import.meta.dirname, '../../experience/cv.pdf');
-		const pdfBuffer = fs.readFileSync(filePath);
-		const pdfMarkdown = await pdf2md.default(pdfBuffer);
-
-		return {
-			content: [
-				{
-					type: 'text' as const,
-					text: pdfMarkdown
-				}
-			]
-		};
-	}
+	async (args: any) => await cv_tool({ fileName: 'cv.pdf' })
 ] as const;
 
 const get_full_experience_tool = [
@@ -46,52 +37,25 @@ const get_full_experience_tool = [
 			query: QuerySchema
 		}
 	},
-	async (args: any) => {
-		const filePath = path.resolve(import.meta.dirname, '../../linkedin-positions.csv');
-		const csv = fs.readFileSync(filePath, 'utf-8');
-		const table = csv.split('\n');
-		const headers = table[0]!.split(',');
-
-		const normalizeCell = (header: string, cell: string): string =>
-			header === 'Location' && cell === '' ? 'Remote' : cell;
-
-		return {
-			content: [
-				{
-					type: 'text' as const,
-					text:
-						'# Full Work Experience\n\n' +
-						table
-							.slice(1)
-							.map((row) =>
-								row
-									.split(',')
-									.map((cell, i) => `${headers[1]}: ${normalizeCell(headers[i]!, cell)}`)
-									.join('\n')
-							)
-							.join('\n\n')
-				}
-			]
-		};
-	}
+	(args: any) => full_experience_tool({ fileName: 'linkedin-positions.csv' })
 ] as const;
 
 const get_dev_experience_tool = [
 	'get_dev_experience',
 	{
-		description: "Get Tommy Doak's dev experience (e.g., work history, projects, etc.)",
+		description:
+			"Get Tommy Doak's dev experience: technical services/capabilities, specializations, and development process/workflow",
 		inputSchema: {
 			query: QuerySchema
 		}
 	},
-	(args: any) => ({
-		content: [
-			{
-				type: 'text' as const,
-				text: ''
-			}
-		]
-	}) // tool
+	(args: any) =>
+		dev_experience_tool({
+			fileName: 'linkedin-positions.csv',
+			services,
+			specializations,
+			processSteps
+		})
 ] as const;
 
 const get_skills_tool = [
@@ -103,23 +67,7 @@ const get_skills_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => {
-		return {
-			content: [
-				{
-					type: 'text' as const,
-					text:
-						'# Skills\n\n' +
-						techStack
-							.map(
-								(stack) =>
-									`**${stack.category}**:\n${stack.technologies.map((tech) => `- ${tech}`).join('\n')}`
-							)
-							.join('\n\n')
-				}
-			]
-		};
-	}
+	(args: any) => skills_tool({ techStack })
 ] as const;
 
 const get_portfolio_tool = [
@@ -130,14 +78,7 @@ const get_portfolio_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => ({
-		content: [
-			{
-				type: 'text' as const,
-				text: ''
-			}
-		]
-	}) // tool
+	(args: any) => portfolio_tool({ projects })
 ] as const;
 
 const get_education_tool = [
@@ -148,14 +89,7 @@ const get_education_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => ({
-		content: [
-			{
-				type: 'text' as const,
-				text: ''
-			}
-		]
-	}) // tool
+	(args: any) => education_tool({ fileName: 'linkedin-education.csv' })
 ] as const;
 
 const get_contact_info_tool = [
@@ -164,14 +98,7 @@ const get_contact_info_tool = [
 		description: "Get Tommy Doak's contact info",
 		query: QuerySchema
 	},
-	(args: any) => ({
-		content: [
-			{
-				type: 'text' as const,
-				text: ''
-			}
-		]
-	}) // tool
+	(args: any) => contact_info_tool({ contactInfo })
 ] as const;
 
 export const addTools = (server: McpServer) => {
