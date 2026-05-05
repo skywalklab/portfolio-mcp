@@ -12,12 +12,12 @@ app.use(express.json());
 
 const allowedOrigins =
 	process.env.NODE_ENV === 'production'
-		? ['https://skywalklab']
+		? ['https://skywalklab.com']
 		: ['http://localhost:3000', 'http://localhost:3001'];
 
 const allowedHosts =
 	process.env.NODE_ENV === 'production'
-		? ['mcp.skywalklab.com']
+		? ['srv1048573.hstgr.cloud']
 		: [
 				'http://localhost:3000',
 				'127.0.0.1:3000',
@@ -188,22 +188,22 @@ app.delete('/mcp', async (req, res) => {
 	);
 });
 
-const authorizationMiddleware = (req: Request, res: Response, next: NextFunction) => {
-	const authHeader = req.headers['authorization'];
-	const token = authHeader && authHeader.split(' ')[1];
+// const authorizationMiddleware = (req: Request, res: Response, next: NextFunction) => {
+// 	const authHeader = req.headers['authorization'];
+// 	const token = authHeader && authHeader.split(' ')[1];
 
-	if (token == null) {
-		return res.status(401).json({ error: 'Missing or invalid authorization header' });
-	}
+// 	if (token == null) {
+// 		return res.status(401).json({ error: 'Missing or invalid authorization header' });
+// 	}
 
-	if (token !== process.env.API_TOKEN) {
-		return res.status(403).json({ error: 'Invalid token' });
-	}
+// 	if (token !== process.env.API_TOKEN) {
+// 		return res.status(403).json({ error: 'Invalid token' });
+// 	}
 
-	next();
-};
+// 	next();
+// };
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, (error) => {
 	if (error) {
 		console.error('Failed to start server:', error);
