@@ -17,7 +17,7 @@ const allowedOrigins =
 
 const allowedHosts =
 	process.env.NODE_ENV === 'production'
-		? ['srv1048573.hstgr.cloud']
+		? ['srv1048573.hstgr.cloud', 'srv1048573.hstgr.cloud:3002']
 		: [
 				'http://localhost:3000',
 				'127.0.0.1:3000',
