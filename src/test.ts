@@ -5,6 +5,6 @@ async function getOutputText<T>(arr: readonly any[]): Promise<string> {
 }
 
 (async () => {
-	const text = await getOutputText(tools['skills']);
+	const text = await getOutputText(tools['get_skills']);
 	console.log(text);
 })();

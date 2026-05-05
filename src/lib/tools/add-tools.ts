@@ -104,13 +104,13 @@ export const get_contact_info_tool = [
 ] as const;
 
 export const tools = {
-	cv: get_cv_tool,
-	full_experience_tool: get_full_experience_tool,
-	dev_experience: get_dev_experience_tool,
-	skills: get_skills_tool,
-	portfolio: get_portfolio_tool,
-	education: get_education_tool,
-	contact_info: get_contact_info_tool
+	get_cv: get_cv_tool,
+	get_full_experience_tool: get_full_experience_tool,
+	get_dev_experience: get_dev_experience_tool,
+	get_skills: get_skills_tool,
+	get_portfolio: get_portfolio_tool,
+	get_education: get_education_tool,
+	get_contact_info: get_contact_info_tool
 } as const;
 
 export const addTools = (server: McpServer) => {
