@@ -1,5 +1,10 @@
-import { cv_tool } from './lib/tools/tools.js';
+import { tools } from './lib/tools/add-tools.js';
+
+async function getOutputText<T>(arr: readonly any[]): Promise<string> {
+	return (await arr[2]()).content[0].text;
+}
 
 (async () => {
-	await cv_tool({ fileName: 'cv.png' });
+	const text = await getOutputText(tools['skills']);
+	console.log(text);
 })();

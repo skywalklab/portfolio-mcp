@@ -17,8 +17,9 @@ import {
 	portfolio_tool,
 	skills_tool
 } from './tools.js';
+import { contactPoints, education, experiences, skillCategories } from '../experience/cv.js';
 
-const get_cv_tool = [
+export const get_cv_tool = [
 	'get_cv',
 	{
 		description: "Get Tommy Doak's CV",
@@ -26,10 +27,10 @@ const get_cv_tool = [
 			query: QuerySchema
 		}
 	},
-	async (args: any) => await cv_tool({ fileName: 'cv.pdf' })
+	() => cv_tool({ contactPoints, skillCategories, experiences, education })
 ] as const;
 
-const get_full_experience_tool = [
+export const get_full_experience_tool = [
 	'get_full_experience',
 	{
 		description:
@@ -38,10 +39,10 @@ const get_full_experience_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => full_experience_tool({ fileName: 'linkedin-positions.csv' })
+	() => full_experience_tool({ fileName: 'linkedin-positions.csv' })
 ] as const;
 
-const get_dev_experience_tool = [
+export const get_dev_experience_tool = [
 	'get_dev_experience',
 	{
 		description:
@@ -50,8 +51,8 @@ const get_dev_experience_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) =>
-		dev_experience_tool({
+	async () =>
+		await dev_experience_tool({
 			fileName: 'linkedin-positions.csv',
 			services,
 			specializations,
@@ -59,7 +60,7 @@ const get_dev_experience_tool = [
 		})
 ] as const;
 
-const get_skills_tool = [
+export const get_skills_tool = [
 	'get_skills',
 	{
 		description:
@@ -68,22 +69,21 @@ const get_skills_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => skills_tool({ techStack })
+	() => skills_tool({ techStack })
 ] as const;
 
-const get_portfolio_tool = [
+export const get_portfolio_tool = [
 	'get_portfolio',
 	{
-		description:
-			"Get Tommy Doak's featured projects: descriptions, tech stack, results, and links",
+		description: "Get Tommy Doak's featured projects: descriptions, tech stack, results, and links",
 		inputSchema: {
 			query: QuerySchema
 		}
 	},
-	(args: any) => portfolio_tool({ projects })
+	() => portfolio_tool({ projects })
 ] as const;
 
-const get_education_tool = [
+export const get_education_tool = [
 	'get_education',
 	{
 		description: "Get Tommy Doak's education: degrees, institutions, and honors",
@@ -91,27 +91,32 @@ const get_education_tool = [
 			query: QuerySchema
 		}
 	},
-	(args: any) => education_tool({ fileName: 'linkedin-education.csv' })
+	() => education_tool({ fileName: 'linkedin-education.csv' })
 ] as const;
 
-const get_contact_info_tool = [
+export const get_contact_info_tool = [
 	'get_contact_info',
 	{
-		description:
-			"Get Tommy Doak's contact info: email, phone, LinkedIn, GitHub, and website",
+		description: "Get Tommy Doak's contact info: email, phone, LinkedIn, GitHub, and website",
 		query: QuerySchema
 	},
-	(args: any) => contact_info_tool({ contactInfo })
+	() => contact_info_tool({ contactInfo })
 ] as const;
 
+export const tools = {
+	cv: get_cv_tool,
+	full_experience_tool: get_full_experience_tool,
+	dev_experience: get_dev_experience_tool,
+	skills: get_skills_tool,
+	portfolio: get_portfolio_tool,
+	education: get_education_tool,
+	contact_info: get_contact_info_tool
+} as const;
+
 export const addTools = (server: McpServer) => {
-	server.registerTool(...get_cv_tool);
-	server.registerTool(...get_full_experience_tool);
-	server.registerTool(...get_dev_experience_tool);
-	server.registerTool(...get_skills_tool);
-	server.registerTool(...get_portfolio_tool);
-	server.registerTool(...get_education_tool);
-	server.registerTool(...get_contact_info_tool);
+	Object.values(tools).forEach((tool) => {
+		server.registerTool(tool[0], tool[1], tool[2]);
+	});
 };
 
 //  Tools that expose your data:

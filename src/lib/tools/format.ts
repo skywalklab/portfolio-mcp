@@ -1,10 +1,19 @@
+import type {
+	ContactPoint,
+	EducationItem,
+	ExperienceItem,
+	SkillCategory
+} from '../experience/cv.js';
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
 import { processCsvFile } from './utils.js';
+
+const markdownList = (items: string[]): string => items.map((item) => `- ${item}`).join('\n');
 
 export async function formatCSV(csv: string, maxRows?: number): Promise<string> {
 	const rows = await processCsvFile(csv);
 
 	return rows
+		.slice(0, maxRows ?? rows.length)
 		.map((row) =>
 			Object.entries(row)
 				.map(([key, value]) => `**${key}**: ${value}`)
@@ -13,14 +22,11 @@ export async function formatCSV(csv: string, maxRows?: number): Promise<string> 
 		.join('\n\n');
 }
 
-export function formatSkills(techStack: TechStack[]): string {
+export function formatSkills(items: TechStack[]): string {
 	return (
 		'# Skills\n\n' +
-		techStack
-			.map(
-				({ category, technologies }) =>
-					`**${category}**:\n${technologies.map((tech) => `- ${tech}`).join('\n')}`
-			)
+		items
+			.map(({ category, technologies }) => `**${category}**:\n${markdownList(technologies)}`)
 			.join('\n\n')
 	);
 }
@@ -34,38 +40,33 @@ export function formatContactInfo(contactInfo: ContactInfo): string {
 	);
 }
 
-export function formatProjects(projects: Project[]): string {
+export function formatProjects(items: Project[]): string {
 	return (
 		'# Projects\n\n' +
-		projects
+		items
 			.map(
-				(project) =>
-					`## ${project.name}
-Url: ${project.url ?? 'None'}
-Tagline: ${project.tagline}
-Description: ${project.description}
-Features: ${project.features.map((feature) => `- ${feature}`)}
-Tech: ${project.tech.map((tech) => `- ${tech}`)}
-Results: ${project.results}`
+				(item) =>
+					`## ${item.name}
+Url: ${item.url ?? 'None'}
+Tagline: ${item.tagline}
+Description: ${item.description}
+Features:\n${markdownList(item.features)}
+Tech:\n${markdownList(item.tech)}
+Results: ${item.results}`
 			)
 			.join('\n\n')
 	);
 }
 
-export function formatSpecializations(specializations: string[]): string {
-	return (
-		'## Focus Areas\n\n' + specializations.map((specialization) => `- ${specialization}`).join('\n')
-	);
+export function formatSpecializations(items: string[]): string {
+	return '## Focus Areas\n\n' + markdownList(items);
 }
 
 export function formatServices(items: Service[]): string {
 	return (
 		'## Technical Capabilities\n\n' +
 		items
-			.map(
-				(item) =>
-					`**${item.title}**\n${item.description}\n${item.items.map((_item) => `- ${_item}`)}`
-			)
+			.map((item) => `**${item.title}**\n${item.description}\n${markdownList(item.items)}`)
 			.join('\n\n')
 	);
 }
@@ -74,9 +75,46 @@ export function formatProcessSteps(items: ProcessStep[]): string {
 	return (
 		'## Development Approach' +
 		items
+			.map((item) => `**${item.title}**\n${item.description}\n${markdownList(item.items)}`)
+			.join('\n\n')
+	);
+}
+
+export function formatCVContactPoints(items: ContactPoint[]): string {
+	return '## Contact\n\n' + items.map((item) => `**${item.type}**: ${item.text}`).join('\n');
+}
+
+export function formatCVSkillCategories(items: SkillCategory[]): string {
+	return (
+		'## Skills\n\n' +
+		items.map((item) => `**${item.title}**\n${markdownList(item.skills)}`).join('\n\n')
+	);
+}
+
+export function formatCVExperiences(items: ExperienceItem[]): string {
+	return (
+		'## Experiences\n\n' +
+		items
 			.map(
 				(item) =>
-					`**${item.title}**\n${item.description}\n${item.items.map((_item) => `- ${_item}`)}`
+					`## ${item.title}
+**${item.company}**
+Url: ${item.url ?? 'None'}
+Years: ${item.years}
+Skills:\n${markdownList(item.skills)}
+Descriptions:\n${markdownList(item.descriptions)}`
+			)
+			.join('\n\n')
+	);
+}
+
+export function formatCVEducation(items: EducationItem[]): string {
+	return (
+		'## Education\n\n' +
+		items
+			.map(
+				(item) =>
+					`## ${item.degree}\n**${item.institution}**\n${item.years}\n${item.description ?? ''}`
 			)
 			.join('\n\n')
 	);

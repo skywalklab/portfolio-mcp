@@ -24,7 +24,6 @@
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.29.0",
-		"@opendocsg/pdf2md": "^0.2.6",
 		"cors": "^2.8.6",
 		"csv-parse": "^6.2.1",
 		"dotenv": "^17.4.2",

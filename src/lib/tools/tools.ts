@@ -1,10 +1,11 @@
 import fs from 'node:fs';
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const pdf2md = require('@opendocsg/pdf2md');
 import {
 	formatContactInfo,
 	formatCSV,
+	formatCVContactPoints,
+	formatCVEducation,
+	formatCVExperiences,
+	formatCVSkillCategories,
 	formatProcessSteps,
 	formatProjects,
 	formatServices,
@@ -14,6 +15,12 @@ import {
 import type { ToolOutput } from './types.js';
 import { getExpFilePath, toolOutput } from './utils.js';
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from '../experience/types.js';
+import type {
+	ContactPoint,
+	EducationItem,
+	ExperienceItem,
+	SkillCategory
+} from '../experience/cv.js';
 
 export async function full_experience_tool({
 	fileName
@@ -35,12 +42,32 @@ export async function education_tool({ fileName }: { fileName: string }): Promis
 	return content;
 }
 
-export async function cv_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
-	const filePath = getExpFilePath(fileName);
-	const pdfBuffer = fs.readFileSync(filePath);
-	const pdfMarkdown = await pdf2md(pdfBuffer);
+export function cv_tool({
+	contactPoints,
+	skillCategories,
+	experiences,
+	education
+}: {
+	contactPoints: ContactPoint[];
+	skillCategories: SkillCategory[];
+	experiences: ExperienceItem[];
+	education: EducationItem[];
+}): ToolOutput {
+	const formattedContactPoints = formatCVContactPoints(contactPoints);
+	const formattedSkillCategories = formatCVSkillCategories(skillCategories);
+	const formattedExperiences = formatCVExperiences(experiences);
+	const formattedEducation = formatCVEducation(education);
 
-	const content = toolOutput(pdfMarkdown);
+	const content = toolOutput(
+		'# Current CV\n\n' +
+			formattedContactPoints +
+			'\n\n' +
+			formattedSkillCategories +
+			'\n\n' +
+			formattedExperiences +
+			'\n\n' +
+			formattedEducation
+	);
 	return content;
 }
 
@@ -59,7 +86,7 @@ export function portfolio_tool({ projects }: { projects: Project[] }): ToolOutpu
 	return content;
 }
 
-export function dev_experience_tool({
+export async function dev_experience_tool({
 	fileName,
 	services,
 	specializations,
@@ -69,11 +96,11 @@ export function dev_experience_tool({
 	services: Service[];
 	specializations: string[];
 	processSteps: ProcessStep[];
-}): ToolOutput {
+}): Promise<ToolOutput> {
 	const filePath = getExpFilePath(fileName);
 	const csv = fs.readFileSync(filePath, 'utf-8');
 
-	const formattedExp = '# Dev Work Experience\n\n' + formatCSV(csv, 5);
+	const formattedExp = '# Dev Work Experience\n\n' + (await formatCSV(csv, 4));
 	const formattedSpecializations = formatSpecializations(specializations);
 	const formattedServices = formatServices(services);
 	const formattedProcessSteps = formatProcessSteps(processSteps);
