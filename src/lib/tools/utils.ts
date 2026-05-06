@@ -1,9 +1,12 @@
-import path from 'node:path';
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parse } from 'csv-parse';
 import type { ToolOutput } from './types.js';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 export function getExpFilePath(fileName: string) {
-	return path.resolve(import.meta.dirname, `../experience/${fileName}`);
+	return path.resolve(__dirname, `../experience/${fileName}`);
 }
 
 export function toolOutput(text: string): ToolOutput {
