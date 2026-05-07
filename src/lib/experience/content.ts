@@ -472,7 +472,7 @@ export const techStack: TechStack[] = [
 	},
 	{
 		category: 'Cloud',
-		technologies: ['Google Cloud Platform', 'GCE', 'GKE', 'AWS', 'Cloudflare Pages']
+		technologies: ['Google Cloud Platform', 'GCE', 'GKE', 'Cloudflare Pages']
 	},
 	{
 		category: 'Deployment',
