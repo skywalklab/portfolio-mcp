@@ -11,21 +11,12 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins =
-	process.env.NODE_ENV === 'production'
-		? ['https://skywalklab.com']
-		: ['http://localhost:3000', 'http://localhost:3001'];
+	process.env.NODE_ENV === 'production' ? ['https://skywalklab.com'] : ['http://localhost:3000'];
 
 const allowedHosts =
 	process.env.NODE_ENV === 'production'
 		? ['srv1048573.hstgr.cloud', 'srv1048573.hstgr.cloud:3002']
-		: [
-				'http://localhost:3000',
-				'127.0.0.1:3000',
-				'localhost:3002',
-				'127.0.0.1:3002',
-				'127.0.0.1',
-				'host.docker.internal'
-			];
+		: ['localhost:3002', '127.0.0.1:3002'];
 
 app.use(
 	cors({
@@ -37,8 +28,23 @@ app.use(
 
 const transports: { [sessionId: string]: StreamableHTTPServerTransport } = {};
 
+const authorizationMiddleware = (req: Request, res: Response, next: NextFunction) => {
+	const authHeader = req.headers['authorization'];
+	const token = authHeader && authHeader.split(' ')[1];
+
+	if (token == null) {
+		return res.status(401).json({ error: 'Missing or invalid authorization header' });
+	}
+
+	if (token !== process.env.API_TOKEN) {
+		return res.status(403).json({ error: 'Invalid token' });
+	}
+
+	next();
+};
+
 // For SkywalkLab
-app.post('/', async (req, res) => {
+app.post('/', authorizationMiddleware, async (req, res) => {
 	try {
 		const sessionId = req.headers['mcp-session-id'] as string | undefined;
 		let transport: StreamableHTTPServerTransport;
@@ -125,7 +131,7 @@ app.get('/', (req, res) => {
 app.delete('/', handleSessionRequest);
 
 // For LLMs (e.g., claude code)
-app.post('/mcp', async (req, res) => {
+app.post('/mcp', authorizationMiddleware, async (req, res) => {
 	const server = new McpServer({
 		name: 'portfolio-mcp-llm',
 		version: '1.0.0'
@@ -187,21 +193,6 @@ app.delete('/mcp', async (req, res) => {
 		})
 	);
 });
-
-// const authorizationMiddleware = (req: Request, res: Response, next: NextFunction) => {
-// 	const authHeader = req.headers['authorization'];
-// 	const token = authHeader && authHeader.split(' ')[1];
-
-// 	if (token == null) {
-// 		return res.status(401).json({ error: 'Missing or invalid authorization header' });
-// 	}
-
-// 	if (token !== process.env.API_TOKEN) {
-// 		return res.status(403).json({ error: 'Invalid token' });
-// 	}
-
-// 	next();
-// };
 
 const PORT = process.env.PORT || 3002;
 app.listen(PORT, (error) => {
