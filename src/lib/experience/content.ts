@@ -290,6 +290,7 @@ export const projects: Project[] = [
 	// 	name: 'Charlotte Voixoff',
 	// 	tagline: 'Headless CMS Monorepo',
 	// 	description: 'Modern decoupled architecture with Payload CMS backend and SvelteKit frontend',
+	//  years: "'25 - Now",
 	// 	features: [
 	// 		'Monorepo with separate CMS and website apps',
 	// 		'GraphQL API',
@@ -303,6 +304,7 @@ export const projects: Project[] = [
 		name: '@skywalklab/lib',
 		tagline: 'Comprehensive Component Library',
 		description: 'Agency-wide reusable Svelte 5 components across all Skywalk Lab projects',
+		years: "'24 - Now",
 		features: [
 			'61+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
 			'Custom Vite plugins (SEO, icons, vendor)',
@@ -319,6 +321,7 @@ export const projects: Project[] = [
 		tagline: 'Publishing Ecosystem with Shared Component Library',
 		description:
 			'Complete publishing platform suite including Inkwell Press, Inkwell Studio, and shared component library',
+		years: "'24 - Now",
 		features: [
 			'Shared component library with reusable Svelte 5 components',
 			'Consistent styles and design system across all Inkwell properties',
@@ -336,6 +339,7 @@ export const projects: Project[] = [
 		name: 'Academic Influence',
 		tagline: 'Comprehensive Academic Intelligence Platform',
 		description: 'Large-scale academic ranking and data platform with millions of data points',
+		years: "'21 - '25",
 		features: [
 			'Interactive data visualizations and comparison tools for 10,000+ institutions',
 			'Degree finder tool integrating BLS and NCES APIs with ROI calculations',
@@ -351,6 +355,7 @@ export const projects: Project[] = [
 		tagline: 'AI-Enhanced Academic Publishing Platform',
 		description:
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
+		years: "'24 - Now",
 		features: [
 			'Reduced content creation time by 90% with TypeScript automation pipeline using local open-source AI',
 			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
@@ -368,6 +373,7 @@ export const projects: Project[] = [
 		tagline: 'Psychological Assessment & Career Platform',
 		description:
 			'AI-powered assessment platform with custom licensing system, MCP server, and headless WordPress',
+		years: "'23 - Now",
 		features: [
 			'Full-stack personality test platform analyzing 19 traits',
 			'Reduced page load times by 60% with Redis caching and database query optimization',
@@ -400,6 +406,7 @@ export const projects: Project[] = [
 		name: 'Nuisiout',
 		tagline: 'French Pest Control Service Site',
 		description: 'Multilingual service website with SEO optimization',
+		years: "'25 - Now",
 		features: [
 			'Multilingual (French)',
 			'Service catalogs, pricing pages, contact forms, blog',
@@ -413,6 +420,7 @@ export const projects: Project[] = [
 		name: 'College Compare Mobile App',
 		tagline: 'Cross-Platform Education Tool',
 		description: 'Native mobile application for college comparison',
+		years: "'21 - '22",
 		features: [
 			'Single codebase deployed to iOS and Android',
 			'Offline-first data sync',

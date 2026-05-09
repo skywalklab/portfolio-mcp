@@ -95,7 +95,7 @@ export const experiences: ExperienceItem[] = [
 		title: 'Full Stack Developer (FSD)',
 		company: 'Inkwell',
 		skills: ['SvelteKit', 'TypeScript', 'SASS', 'MCP'],
-		years: "'23 - Now",
+		years: "'24 - Now",
 		descriptions: [
 			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 platforms.',
 			'Enabled AI-powered user support across 2 LLM providers by developing a custom MCP server.',
@@ -132,7 +132,7 @@ export const experiences: ExperienceItem[] = [
 		title: 'Full Stack Developer (FSD)',
 		company: 'Academic Influence',
 		skills: ['Nunjucks', 'SASS', 'PostgreSQL', 'Webpack', 'Express'],
-		years: "'19 - '23",
+		years: "'21 - '25",
 		descriptions: [
 			'Built interactive data visualizations and comparison tools for 10,000+ institutions using Nunjucks, SASS, and TypeScript.',
 			'Enabled data-driven college decisions by integrating BLS and NCES APIs with ROI calculations in a degree finder tool.',

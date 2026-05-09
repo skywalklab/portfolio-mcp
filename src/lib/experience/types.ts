@@ -17,6 +17,7 @@ export interface Project {
 	name: string;
 	tagline: string;
 	description: string;
+	years: string;
 	features: string[];
 	tech: string[];
 	results: string;
