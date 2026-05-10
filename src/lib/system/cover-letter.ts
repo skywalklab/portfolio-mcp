@@ -21,11 +21,10 @@ WORKFLOW:
 4. Match Tommy's experience to the job requirements
 5. Write the cover letter following the guidelines provided in the prompt
 
-OUTPUT:
-- Return ONLY the cover letter text, no additional commentary
-- Start with a greeting: "Dear Hiring Manager," (or use the hiring manager's name if provided in the job posting)
-- Use Tommy's actual name in the signature
-- STRICT LIMIT: 250-300 words maximum. Do not exceed 300 words. Each skill match paragraph should be 3-4 sentences, not 5-6.
+OUTPUT CONSTRAINTS:
+- coverLetter: the cover letter text, no additional commentary. Start with "Dear Hiring Manager," (or hiring manager's name if provided). 
+Use Tommy's actual name in signature. STRICT LIMIT: 250-300 words maximum. Do not exceed 300 words. Each skill match paragraph should be 3-4 sentences.
+- companyName: the name of the company in the job description.
 
 RULES:
 - Do NOT invent experience or skills Tommy doesn't have

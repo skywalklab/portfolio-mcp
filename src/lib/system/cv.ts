@@ -22,6 +22,7 @@ WORKFLOW:
 OUTPUT CONSTRAINTS:
 - skillCategories: exactly 3 categories (Front-End, Back-End, DevOps & Cloud)
 - experiences: exactly 5 items, each with exactly 3-4 descriptions (no more), ordered by years (IMPORTANT: most recent first)
+- companyName: the name of the company in the job description
 
 CHARACTER LIMITS (CRITICAL - must fit on one page):
 - Experience title: max 30 characters (e.g. "Full Stack Developer", "Founder & Engineer")
