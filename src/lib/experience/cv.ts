@@ -3,7 +3,9 @@
 export interface ContactPoint {
 	type: string;
 	text: string;
-	lucide_icon: string;
+	lucide_icon?: string;
+	img?: string;
+	href?: string;
 }
 
 export interface SkillCategory {
@@ -28,11 +30,22 @@ export interface EducationItem {
 }
 
 export const contactPoints: ContactPoint[] = [
-	{ type: 'Position', text: 'Full Stack Software Engineer', lucide_icon: 'user' },
+	{ type: 'Position', text: 'Software Engineer', lucide_icon: 'user' },
 	{ type: 'Location', text: 'Nice, France', lucide_icon: 'map-pin' },
-	{ type: 'Phone', text: '+33 751237794', lucide_icon: 'phone' },
 	{ type: 'Email', text: 'tcdoak@gmail.com', lucide_icon: 'mail' },
-	{ type: 'Website', text: 'skywalklab.com', lucide_icon: 'globe' }
+	{
+		type: 'Website',
+		text: 'skywalklab.com/hire-tommy-doak',
+		// lucide_icon: "globe",
+		img: 'https://skywalklab.com/brand/logo-96.png',
+		href: 'https://skywalklab.com/hire-tommy-doak'
+	},
+	{
+		type: 'LinkedIn',
+		text: '/in/tommydoak',
+		lucide_icon: 'linkedin',
+		href: 'https:/www.linkedin.com/in/tommydoak/'
+	}
 ];
 
 export const skillCategories: SkillCategory[] = [
