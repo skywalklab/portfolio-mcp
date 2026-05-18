@@ -62,7 +62,7 @@ export const skillCategories: SkillCategory[] = [
 			'Webpack',
 			'GSAP',
 			'Three.js',
-			'Paraglide',
+			'i18n',
 			'Photoshop',
 			'Premiere Pro'
 		]
@@ -97,7 +97,7 @@ export const experiences: ExperienceItem[] = [
 		title: 'Founder',
 		company: 'SkywalkLab',
 		url: 'skywalklab.com',
-		skills: ['SvelteKit', 'TypeScript', 'Vite', 'AI Integration'],
+		skills: ['SvelteKit', 'TypeScript', 'Vite', 'AI Integration', 'Three.js', 'GSAP', 'i18n'],
 		years: "'25 - Now",
 		descriptions: [
 			'Founded a web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites.',
@@ -107,7 +107,7 @@ export const experiences: ExperienceItem[] = [
 	{
 		title: 'Full Stack Developer (FSD)',
 		company: 'Inkwell',
-		skills: ['SvelteKit', 'TypeScript', 'SASS', 'MCP'],
+		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
 		years: "'24 - Now",
 		descriptions: [
 			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 platforms.',
@@ -119,26 +119,28 @@ export const experiences: ExperienceItem[] = [
 	},
 	{
 		title: 'FSD / Dir. of Operations',
-		company: 'Success Portraits Test',
-		skills: ['Next.js', 'TypeScript', 'PostgreSQL', 'Docker', 'GKE', 'Redis'],
+		company: 'Success Portraits',
+		skills: [
+			'Next.js',
+			'React',
+			'TypeScript',
+			'PostgreSQL',
+			'Docker',
+			'GKE',
+			'Redis',
+			'PHP',
+			'MySQL',
+			'Nginx',
+			'GCE'
+		],
 		years: "'23 - Now",
 		descriptions: [
 			'Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL.',
-			'Reduced page load times by 60% by implementing Redis caching and optimizing database queries across the application.',
-			'Expanded product offerings by 400% (from 2 to 10 PDF reports) by building automated PDF generation and mapping personality traits to ONET work styles.',
-			'Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs for personalized feedback.',
-			'Improved recommendation accuracy by implementing Euclidean distance algorithms to match user personality profiles with career paths.'
-		]
-	},
-	{
-		title: 'FSD / Dir. of Operations',
-		company: 'Success Portraits WordPress',
-		skills: ['PHP', 'Redis', 'MySQL', 'Nginx', 'GCE'],
-		years: "'23 - Now",
-		descriptions: [
-			'Enabled group testing for enterprise clients by building a custom WordPress plugin with "master keys" system supporting individual and bulk test key management.',
-			'Achieved 99.9% uptime by configuring Google Compute Engine VMs with Nginx, Redis caching, and MySQL optimization.',
-			'Led a cross-functional team of 3 (marketing director, blog writer) and coordinated with academic partners and clients to drive product development and strategic decisions.'
+			'Achieved 99.9% uptime and reduced page load times by 60% through Redis caching, database optimization, and GCE infrastructure.',
+			'Expanded product offerings by 400% (2 to 10 PDF reports) by building automated PDF generation and mapping traits to ONET work styles.',
+			'Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs.',
+			'Built WordPress plugin with enterprise group testing features and bulk test key management.',
+			'Led cross-functional team of 3 and coordinated with academic partners to drive product development.'
 		]
 	},
 	{

@@ -21,7 +21,7 @@ WORKFLOW:
 
 OUTPUT CONSTRAINTS:
 - skillCategories: exactly 3 categories (Front-End, Back-End, DevOps & Cloud)
-- experiences: exactly 5 items, each with exactly 3-4 descriptions (no more), ordered by years (IMPORTANT: most recent first)
+- experiences: exactly 4 items, each with exactly 4-5 descriptions (no more), ordered by years (IMPORTANT: most recent first)
 - companyName: the name of the company in the job description
 
 CHARACTER LIMITS (CRITICAL - must fit on one page):
@@ -35,6 +35,7 @@ CHARACTER LIMITS (CRITICAL - must fit on one page):
 
 RULES:
 - Do NOT invent experience or skills Tommy doesn't have
+- NEVER change the years/dates - use them exactly as they appear in the source data
 - Only reframe, reorder, or emphasize existing skills and accomplishments
 - Prioritize skills/projects that match the job requirements
 - For dev/engineering roles: ONLY include dev-related experience. Do NOT include non-technical roles (teaching, tutoring, account management, etc.) unless they directly involved software development
