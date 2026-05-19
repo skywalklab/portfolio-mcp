@@ -45,6 +45,12 @@ export const contactPoints: ContactPoint[] = [
 		text: '/in/tommydoak',
 		lucide_icon: 'linkedin',
 		href: 'https:/www.linkedin.com/in/tommydoak/'
+	},
+	{
+		type: 'Github',
+		text: 'portfolio-mcp',
+		lucide_icon: 'github',
+		href: 'https://github.com/skywalklab/portfolio-mcp/'
 	}
 ];
 
