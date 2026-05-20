@@ -64,9 +64,12 @@ export const clientProjects: ClientProject[] = [
 			'Full-stack platform analyzing 19 personality traits',
 			'Reduced page load times by 60% with Redis caching and query optimization',
 			'Expanded offerings by 400% (2 to 10 PDF reports) with automated generation',
+			'Customized WordPress/WooCommerce with 30+ PHP files: Google OAuth, custom auth flows, AES-256 encrypted email verification, tiered bulk pricing',
+			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin CRUD interface',
+			'Integrated Facebook Conversions API and Klaviyo API for server-side tracking and email marketing automation',
+			'Custom REST API endpoints for cross-subdomain authentication between WordPress and Next.js app',
 			'Custom MCP server integrating test results with LLMs for personalized feedback',
 			'Euclidean distance algorithms matching personality profiles to career paths',
-			'Master Keys WordPress plugin for enterprise group testing',
 			'99.9% uptime with GCE, Nginx, Redis, and MySQL optimization'
 		],
 		results:
@@ -215,17 +218,20 @@ export const services: Service[] = [
 	},
 	{
 		category: 'wordpress',
-		title: 'WordPress Development & Integration',
-		description: 'Custom WordPress applications and enterprise plugin development',
+		title: 'WordPress & PHP Development',
+		description:
+			'Custom WordPress applications, WooCommerce customization, and enterprise plugin development',
 		items: [
 			'Headless WordPress with modern frontends (Next.js, SvelteKit)',
 			'Custom enterprise plugin development (licensing, subscription management)',
-			'Complex database-driven WordPress functionality',
-			'Custom WordPress admin interfaces with TypeScript',
-			'WordPress REST API and custom endpoints',
+			'WooCommerce template overrides (login, registration, checkout, reviews, product pages)',
+			'Custom authentication flows with Google OAuth and encrypted email verification',
+			'WordPress REST API and custom endpoints for cross-subdomain authentication',
+			'Tiered/bulk pricing systems and custom checkout logic',
+			'Facebook Conversions API and Klaviyo integration for server-side tracking',
+			'Redis cache integration and performance optimization',
 			'WooCommerce e-commerce and payment integration',
 			'Custom post types, taxonomies, and meta fields',
-			'Multi-site WordPress installations',
 			'Local development workflows (Local by Flywheel)'
 		]
 	},
@@ -372,16 +378,20 @@ export const projects: Project[] = [
 		name: 'Success Portraits',
 		tagline: 'Psychological Assessment & Career Platform',
 		description:
-			'AI-powered assessment platform with custom licensing system, MCP server, and headless WordPress',
+			'AI-powered assessment platform with custom licensing system, MCP server, and heavily customized WordPress/WooCommerce backend',
 		years: "'23 - Now",
 		features: [
 			'Full-stack personality test platform analyzing 19 traits',
 			'Reduced page load times by 60% with Redis caching and database query optimization',
 			'Expanded product offerings by 400% (from 2 to 10 PDF reports) with automated PDF generation',
-			'Mapped personality traits to ONET work styles for career matching',
+			'30+ custom PHP files: Google OAuth integration, custom login/registration overrides, AES-256 encrypted email verification flow',
+			'Enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin CRUD UI',
+			'Tiered bulk pricing system and WooCommerce template overrides for checkout, reviews, and product pages',
+			'Facebook Conversions API integration for server-side event tracking (registration, purchase, add-to-cart)',
+			'Klaviyo API integration for email marketing automation, subscriber management, and custom events',
+			'Custom REST API endpoints for cross-subdomain auth between WordPress and Next.js test app',
 			'Custom MCP server integrating test results with LLMs for personalized feedback',
 			'Euclidean distance algorithms to match user personality profiles with career paths',
-			'Custom WordPress plugin with "master keys" system for enterprise group testing',
 			'99.9% uptime with GCE VMs, Nginx, Redis caching, and MySQL optimization'
 		],
 		tech: [
@@ -392,6 +402,8 @@ export const projects: Project[] = [
 			'GKE',
 			'Redis',
 			'PHP',
+			'WordPress',
+			'WooCommerce',
 			'MySQL',
 			'Nginx',
 			'GCE',
@@ -454,6 +466,7 @@ export const techStack: TechStack[] = [
 			'Express',
 			'PostgreSQL',
 			'PHP',
+			'WordPress',
 			'Redis',
 			'MySQL',
 			'MongoDB',
@@ -464,7 +477,7 @@ export const techStack: TechStack[] = [
 	},
 	{
 		category: 'CMS',
-		technologies: ['Payload CMS 3.0', 'WordPress (headless)']
+		technologies: ['Payload CMS 3.0', 'WordPress']
 	},
 	{
 		category: 'Mobile',

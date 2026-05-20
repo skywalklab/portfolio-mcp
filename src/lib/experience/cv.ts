@@ -145,7 +145,7 @@ export const experiences: ExperienceItem[] = [
 			'Achieved 99.9% uptime and reduced page load times by 60% through Redis caching, database optimization, and GCE infrastructure.',
 			'Expanded product offerings by 400% (2 to 10 PDF reports) by building automated PDF generation and mapping traits to ONET work styles.',
 			'Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs.',
-			'Built WordPress plugin with enterprise group testing features and bulk test key management.',
+			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin interface.',
 			'Led cross-functional team of 3 and coordinated with academic partners to drive product development.'
 		]
 	},
