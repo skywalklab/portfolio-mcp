@@ -44,7 +44,7 @@ export const contactPoints: ContactPoint[] = [
 		type: 'LinkedIn',
 		text: '/in/tommydoak',
 		lucide_icon: 'linkedin',
-		href: 'https:/www.linkedin.com/in/tommydoak/'
+		href: 'https://www.linkedin.com/in/tommydoak/'
 	},
 	{
 		type: 'Github',
