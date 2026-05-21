@@ -111,7 +111,7 @@ export const experiences: ExperienceItem[] = [
 		]
 	},
 	{
-		title: 'Full Stack Developer (FSD)',
+		title: 'Full-Stack Developer',
 		company: 'Inkwell',
 		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
 		years: "'24 - Now",
@@ -124,7 +124,7 @@ export const experiences: ExperienceItem[] = [
 		]
 	},
 	{
-		title: 'FSD / Dir. of Operations',
+		title: 'Full-Stack Developer',
 		company: 'Success Portraits',
 		skills: [
 			'Next.js',
@@ -150,7 +150,7 @@ export const experiences: ExperienceItem[] = [
 		]
 	},
 	{
-		title: 'Full Stack Developer (FSD)',
+		title: 'Full-Stack Developer',
 		company: 'Academic Influence',
 		skills: ['Nunjucks', 'SASS', 'PostgreSQL', 'Webpack', 'Express'],
 		years: "'21 - '25",

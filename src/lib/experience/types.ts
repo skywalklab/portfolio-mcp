@@ -15,6 +15,7 @@ export interface Service {
 
 export interface Project {
 	name: string;
+	role: string;
 	tagline: string;
 	description: string;
 	years: string;

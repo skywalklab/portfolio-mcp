@@ -308,6 +308,7 @@ export const projects: Project[] = [
 	// },
 	{
 		name: '@skywalklab/lib',
+		role: 'Full-Stack Developer',
 		tagline: 'Comprehensive Component Library',
 		description: 'Agency-wide reusable Svelte 5 components across all Skywalk Lab projects',
 		years: "'24 - Now",
@@ -324,6 +325,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Inkwell Press & Studio',
+		role: 'Full-Stack Developer',
 		tagline: 'Publishing Ecosystem with Shared Component Library',
 		description:
 			'Complete publishing platform suite including Inkwell Press, Inkwell Studio, and shared component library',
@@ -343,6 +345,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Academic Influence',
+		role: 'Full-Stack Developer',
 		tagline: 'Comprehensive Academic Intelligence Platform',
 		description: 'Large-scale academic ranking and data platform with millions of data points',
 		years: "'21 - '25",
@@ -358,6 +361,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Inkwell',
+		role: 'Full-Stack Developer',
 		tagline: 'AI-Enhanced Academic Publishing Platform',
 		description:
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
@@ -376,6 +380,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Success Portraits',
+		role: 'Full-Stack Developer',
 		tagline: 'Psychological Assessment & Career Platform',
 		description:
 			'AI-powered assessment platform with custom licensing system, MCP server, and heavily customized WordPress/WooCommerce backend',
@@ -416,6 +421,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Nuisiout',
+		role: 'Full-Stack Developer',
 		tagline: 'French Pest Control Service Site',
 		description: 'Multilingual service website with SEO optimization',
 		years: "'25 - Now",
@@ -430,6 +436,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'College Compare Mobile App',
+		role: 'Full-Stack Developer',
 		tagline: 'Cross-Platform Education Tool',
 		description: 'Native mobile application for college comparison',
 		years: "'21 - '22",
