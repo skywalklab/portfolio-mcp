@@ -114,7 +114,7 @@ export const experiences: ExperienceItem[] = [
 		title: 'Full-Stack Developer',
 		company: 'Inkwell',
 		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
-		years: "'24 - Now",
+		years: "'24 - '26",
 		descriptions: [
 			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 platforms.',
 			'Enabled AI-powered user support across 2 LLM providers by developing a custom MCP server.',
@@ -139,7 +139,7 @@ export const experiences: ExperienceItem[] = [
 			'Nginx',
 			'GCE'
 		],
-		years: "'23 - Now",
+		years: "'23 - '26",
 		descriptions: [
 			'Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL.',
 			'Achieved 99.9% uptime and reduced page load times by 60% through Redis caching, database optimization, and GCE infrastructure.',
