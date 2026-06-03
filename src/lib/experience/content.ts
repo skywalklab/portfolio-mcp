@@ -329,7 +329,7 @@ export const projects: Project[] = [
 		tagline: 'Publishing Ecosystem with Shared Component Library',
 		description:
 			'Complete publishing platform suite including Inkwell Press, Inkwell Studio, and shared component library',
-		years: "'24 - Now",
+		years: "'24 - '26",
 		features: [
 			'Shared component library with reusable Svelte 5 components',
 			'Consistent styles and design system across all Inkwell properties',
@@ -348,7 +348,7 @@ export const projects: Project[] = [
 		role: 'Full-Stack Developer',
 		tagline: 'Comprehensive Academic Intelligence Platform',
 		description: 'Large-scale academic ranking and data platform with millions of data points',
-		years: "'21 - '25",
+		years: "'21 - '26",
 		features: [
 			'Interactive data visualizations and comparison tools for 10,000+ institutions',
 			'Degree finder tool integrating BLS and NCES APIs with ROI calculations',
@@ -365,7 +365,7 @@ export const projects: Project[] = [
 		tagline: 'AI-Enhanced Academic Publishing Platform',
 		description:
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
-		years: "'24 - Now",
+		years: "'24 - '26",
 		features: [
 			'Reduced content creation time by 90% with TypeScript automation pipeline using local open-source AI',
 			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
@@ -384,7 +384,7 @@ export const projects: Project[] = [
 		tagline: 'Psychological Assessment & Career Platform',
 		description:
 			'AI-powered assessment platform with custom licensing system, MCP server, and heavily customized WordPress/WooCommerce backend',
-		years: "'23 - Now",
+		years: "'23 - '26",
 		features: [
 			'Full-stack personality test platform analyzing 19 traits',
 			'Reduced page load times by 60% with Redis caching and database query optimization',
