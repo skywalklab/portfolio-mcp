@@ -48,7 +48,7 @@ export const contactPoints: ContactPoint[] = [
 	},
 	{
 		type: 'Github',
-		text: 'portfolio-mcp',
+		text: '/skywalklab',
 		lucide_icon: 'github',
 		href: 'https://github.com/skywalklab/'
 	}
