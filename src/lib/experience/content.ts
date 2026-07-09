@@ -542,6 +542,18 @@ export const techStack: TechStack[] = [
 	{
 		category: 'Internationalization',
 		technologies: ['Paraglide', 'i18n frameworks']
+	},
+	{
+		category: 'Marketing & Analytics',
+		technologies: [
+			'Google Tag Manager',
+			'Google Analytics',
+			'Google Ads',
+			'Facebook Pixel',
+			'Facebook CAPI',
+			'Klaviyo',
+			'GDPR Consent'
+		]
 	}
 ];
 
