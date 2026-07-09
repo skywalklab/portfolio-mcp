@@ -27,7 +27,7 @@ export interface EducationItem {
 	institution: string;
 	years: string;
 	description?: string;
-	description2?: string;
+	descriptionWithTitle?: string;
 }
 
 export const contactPoints: ContactPoint[] = [
@@ -178,7 +178,7 @@ export const education: EducationItem[] = [
 		institution: 'Grenoble Ecole de Management',
 		years: "'20 - '21",
 		description: '2021 Best Dissertation Winner',
-		description2:
+		descriptionWithTitle:
 			'2021 Best Dissertation Winner — "Website Strategy and Coordination of Multinational Companies"'
 	},
 	{
