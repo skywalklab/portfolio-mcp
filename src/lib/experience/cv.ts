@@ -139,7 +139,7 @@ export const experiences: ExperienceItem[] = [
 		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
 		years: "'24 - '26",
 		descriptions: [
-			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms.',
+			'Built TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms.',
 			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support.',
 			'Automated B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns.',
 			'Built a shared component library used across 3 Inkwell products (Inkwell, Press, Publishers), ensuring brand consistency and reducing development time.'

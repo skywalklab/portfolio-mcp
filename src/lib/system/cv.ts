@@ -37,6 +37,7 @@ RULES:
 - Skills must be copied EXACTLY from the skillCategories arrays - do not rephrase, combine, or invent new skills
 - Do NOT invent experience or skills Tommy doesn't have
 - NEVER change the years/dates - use them exactly as they appear in the source data
+- NEVER invent percentages or metrics (e.g., "90% improvement", "60% faster"). Only use numbers that appear in the source data. If no metric exists, describe the work without quantifying it.
 - Only reframe, reorder, or emphasize existing skills and accomplishments
 - Prioritize skills/projects that match the job requirements
 - For dev/engineering roles: ONLY include dev-related experience. Do NOT include non-technical roles (teaching, tutoring, account management, etc.) unless they directly involved software development

@@ -33,8 +33,7 @@ export const clientProjects: ClientProject[] = [
 		description:
 			'Marketing pages, AI chatbot, administrative tools, and custom MCP server for an academic writing platform',
 		outcomes: [
-			'Reduced content creation time by 90% with TypeScript automation pipeline',
-			'Local open-source AI querying YouTube API, generating scripts, creating videos via Pictory API',
+			'Built TypeScript automation pipeline with local open-source AI, querying YouTube API, generating scripts, and creating videos via Pictory API',
 			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
 			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
 			'B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
@@ -69,7 +68,7 @@ export const clientProjects: ClientProject[] = [
 			'An AI-powered personality assessment platform with custom licensing system and MCP server',
 		outcomes: [
 			'Full-stack platform analyzing 19 personality traits',
-			'Reduced page load times by 60% with Redis caching and query optimization',
+			'Improved page load times with Redis caching and query optimization',
 			'Expanded offerings by 400% (2 to 10 PDF reports) with automated generation',
 			'Customized WordPress/WooCommerce with 30+ PHP files: Google OAuth, custom auth flows, AES-256 encrypted email verification, tiered bulk pricing',
 			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin CRUD interface',
@@ -393,7 +392,7 @@ export const projects: Project[] = [
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
 		years: "'24 - '26",
 		features: [
-			'Reduced content creation time by 90% with TypeScript automation pipeline using local open-source AI',
+			'Built TypeScript automation pipeline with local open-source AI for content creation',
 			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
 			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
 			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
@@ -416,7 +415,7 @@ export const projects: Project[] = [
 		years: "'23 - '26",
 		features: [
 			'Full-stack personality test platform analyzing 19 traits',
-			'Reduced page load times by 60% with Redis caching and database query optimization',
+			'Improved page load times with Redis caching and PostgreSQL for session and user data',
 			'Built 10 PDF report types covering personality insights, coaching, and career matching',
 			'30+ custom PHP files: Google OAuth integration, custom login/registration overrides, AES-256 encrypted email verification flow',
 			'Enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin CRUD UI',
@@ -812,7 +811,7 @@ export const clientServices: ClientService[] = [
 		lucide_icon: 'gauge',
 		benefits: [
 			'Lightning-fast page loads (under 2 seconds)',
-			'99.9% uptime with automatic backups',
+			'Reliable uptime with automatic backups',
 			'Handles traffic spikes without slowing down',
 			'Global content delivery for worldwide speed',
 			'24/7 monitoring and security protection'
