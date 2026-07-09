@@ -20,12 +20,12 @@ WORKFLOW:
 3. Tailor the CV to emphasize skills/experience relevant to the job posting
 
 OUTPUT CONSTRAINTS:
-- skillCategories: exactly 3 categories (Front-End, Back-End, DevOps & Cloud)
+- skillCategories: choose exactly 3 of 4 categories based on job relevance (Front-End, Back-End, DevOps & Cloud, Marketing & Analytics)
 - experiences: exactly 4 items, each with exactly 4-5 descriptions (no more), ordered by years (IMPORTANT: most recent first)
 - companyName: the name of the company in the job description
 
 CHARACTER LIMITS (CRITICAL - must fit on one page):
-- Experience title: max 30 characters (e.g. "Full Stack Developer", "Founder & Engineer")
+- Experience title: max 30 characters, use consistent format "Full-Stack Developer" (hyphenated) for all dev roles
 - Experience url: domain only, no https:// (e.g. "skywalklab.com" not "https://skywalklab.com")
 - Experience skills: max 4 skills per item
 - Each description bullet: max 145 characters (aim for 110-130, never exceed 145)

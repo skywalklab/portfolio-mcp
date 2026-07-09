@@ -96,6 +96,18 @@ export const skillCategories: SkillCategory[] = [
 	{
 		title: 'DevOps & Cloud',
 		skills: ['Git', 'Docker', 'Nginx', 'GCP', 'GCE', 'GKE', 'Cloudflare Pages']
+	},
+	{
+		title: 'Marketing & Analytics',
+		skills: [
+			'Google Tag Manager',
+			'Google Analytics',
+			'Google Ads',
+			'Facebook Pixel',
+			'Facebook CAPI',
+			'Klaviyo',
+			'GDPR Consent'
+		]
 	}
 ];
 
