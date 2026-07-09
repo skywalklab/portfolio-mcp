@@ -40,7 +40,8 @@ RULES:
 - Do NOT invent experience or skills Tommy doesn't have
 - NEVER change the years/dates - use them exactly as they appear in the source data
 - NEVER invent percentages or metrics (e.g., "90% improvement", "60% faster"). Only use numbers that appear in the source data. If no metric exists, describe the work without quantifying it.
-- Only reframe, reorder, or emphasize existing skills and accomplishments
+- USE ORIGINAL WORDING from the source data. Do NOT rewrite bullets to sound "more relevant" - the impressive specifics ARE what makes them relevant. "800k publisher workflows" is better than "large-scale outreach." Only shorten for character limits, never reword to genericize.
+- Tailor by SELECTING and REORDERING the most relevant bullets, not by rewriting them
 - Prioritize skills/projects that match the job requirements
 - For dev/engineering roles: ONLY include dev-related experience. Do NOT include non-technical roles (teaching, tutoring, account management, etc.) unless they directly involved software development
 - Use get_dev_experience as the primary source, not get_full_experience`;

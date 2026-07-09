@@ -31,7 +31,7 @@ export interface EducationItem {
 }
 
 export const contactPoints: ContactPoint[] = [
-	{ type: 'Position', text: 'Software Engineer', lucide_icon: 'user' },
+	{ type: 'Position', text: 'Full-Stack Developer', lucide_icon: 'user' },
 	{ type: 'Location', text: 'Nice, France', lucide_icon: 'map-pin' },
 	{ type: 'Email', text: 'tcdoak@gmail.com', lucide_icon: 'mail' },
 	{
