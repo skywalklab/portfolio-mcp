@@ -15,10 +15,14 @@ export const clientProjects: ClientProject[] = [
 		description:
 			'A comprehensive platform helping students compare 10,000+ colleges and universities',
 		outcomes: [
-			'Interactive data visualizations and comparison tools for 10,000+ institutions',
-			'Degree finder integrating BLS and NCES APIs with ROI calculations',
-			'Reduced hero image creation time by 95% with dynamic SVG generator',
-			'Handles millions of data points with instant search results'
+			'Interactive college comparison platform with NCES IPEDS data across 10,000+ institutions',
+			'Degree finder with 12+ parallel PostgreSQL queries across IPEDS, BLS, CIP, SOC, and COLI datasets',
+			'ROI calculations including time-to-recoup, salary projections, and cost-of-living adjustments',
+			'Multi-table JOINs with aggregations, subqueries, and weighted averages',
+			'Created SVG template system generating unique hero images for thousands of pages',
+			'Handles millions of data points with instant search results',
+			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking, with GDPR-compliant cookie consent',
+			'Generated campaign spreadsheets with Google Scripts for GMASS email automation'
 		],
 		results:
 			'Empowering students to make informed decisions about their education with fast, reliable data'
@@ -31,10 +35,13 @@ export const clientProjects: ClientProject[] = [
 		outcomes: [
 			'Reduced content creation time by 90% with TypeScript automation pipeline',
 			'Local open-source AI querying YouTube API, generating scripts, creating videos via Pictory API',
-			'Auto-posting to 3 social media platforms',
-			'Custom MCP server enabling AI-powered user support across 2 LLM providers',
+			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
+			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
+			'B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
 			'Shared component library across 3 Inkwell products ensuring brand consistency',
 			'Admin dashboards with Stripe integration for payment processing and analytics',
+			'Configured Google Analytics events and Google Ads conversion tracking for subscription and trial-to-purchase funnels',
+			'Implemented Facebook Pixel for conversion tracking',
 			'Demo videos with Premiere Pro improving onboarding and retention'
 		],
 		results:
@@ -66,11 +73,11 @@ export const clientProjects: ClientProject[] = [
 			'Expanded offerings by 400% (2 to 10 PDF reports) with automated generation',
 			'Customized WordPress/WooCommerce with 30+ PHP files: Google OAuth, custom auth flows, AES-256 encrypted email verification, tiered bulk pricing',
 			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin CRUD interface',
-			'Integrated Facebook Conversions API and Klaviyo API for server-side tracking and email marketing automation',
+			'Implemented Facebook Pixel and Conversions API for event tracking, plus Klaviyo API for email marketing automation',
 			'Custom REST API endpoints for cross-subdomain authentication between WordPress and Next.js app',
 			'Custom MCP server integrating test results with LLMs for personalized feedback',
 			'Euclidean distance algorithms matching personality profiles to career paths',
-			'99.9% uptime with GCE, Nginx, Redis, and MySQL optimization'
+			'Improved page load times with Redis caching and PostgreSQL for session and user data'
 		],
 		results:
 			'Helping individuals discover career paths with enterprise-grade licensing and AI analysis'
@@ -307,13 +314,28 @@ export const projects: Project[] = [
 	// 	results: 'Modern decoupled architecture with type-safe content management',
 	// },
 	{
+		name: 'SkywalkLab',
+		role: 'Founder & Full-Stack Developer',
+		tagline: 'Web Agency',
+		description: 'Web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites',
+		years: "'25 - Now",
+		features: [
+			'Lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data',
+			'Custom web apps, e-commerce platforms, and multilingual sites for clients',
+			'AI-powered workflow automations'
+		],
+		tech: ['SvelteKit', 'TypeScript', 'SQLite', 'Vite', 'AI Integration', 'Lighthouse'],
+		results: 'Delivering custom solutions for small businesses',
+		url: 'https://skywalklab.com'
+	},
+	{
 		name: '@skywalklab/lib',
 		role: 'Full-Stack Developer',
 		tagline: 'Comprehensive Component Library',
 		description: 'Agency-wide reusable Svelte 5 components across all Skywalk Lab projects',
 		years: "'24 - Now",
 		features: [
-			'61+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
+			'90+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
 			'Custom Vite plugins (SEO, icons, vendor)',
 			'Multi-stage Docker builds',
 			'Actions, utilities, CSS modules, i18n support',
@@ -350,10 +372,14 @@ export const projects: Project[] = [
 		description: 'Large-scale academic ranking and data platform with millions of data points',
 		years: "'21 - '26",
 		features: [
-			'Interactive data visualizations and comparison tools for 10,000+ institutions',
-			'Degree finder tool integrating BLS and NCES APIs with ROI calculations',
-			'Reduced hero image creation time by 95% with dynamic SVG-based generator for thousands of pages',
-			'Complex data visualization and sports data'
+			'Interactive college comparison platform with NCES IPEDS data across 10,000+ institutions',
+			'Degree finder with 12+ parallel PostgreSQL queries across IPEDS, BLS, CIP, SOC, and COLI datasets',
+			'ROI calculations including time-to-recoup, salary projections, and cost-of-living adjustments',
+			'Multi-table JOINs with aggregations, subqueries, and weighted averages',
+			'Created SVG template system generating unique hero images for thousands of pages',
+			'Complex data visualization and sports data',
+			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking, with GDPR-compliant cookie consent',
+			'Generated campaign spreadsheets with Google Scripts for GMASS email automation'
 		],
 		tech: ['Nunjucks', 'SASS', 'TypeScript', 'PostgreSQL', 'Webpack', 'Express'],
 		results: 'Handles massive datasets with sub-second query times',
@@ -369,10 +395,13 @@ export const projects: Project[] = [
 		features: [
 			'Reduced content creation time by 90% with TypeScript automation pipeline using local open-source AI',
 			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
-			'Auto-posting to 3 social media platforms',
-			'Custom MCP server enabling AI-powered user support across 2 LLM providers',
+			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
+			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
+			'B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
 			'Shared component library used across 3 Inkwell products (Inkwell, Press, Publishers)',
-			'Admin dashboards with Stripe integration for payment processing and analytics'
+			'Admin dashboards with Stripe integration for payment processing and analytics',
+			'Configured Google Analytics events and Google Ads conversion tracking for subscription and trial-to-purchase funnels',
+			'Implemented Facebook Pixel for conversion tracking'
 		],
 		tech: ['SvelteKit 5', 'TypeScript', 'SASS', 'MCP', 'Stripe', 'YouTube API', 'Pictory API'],
 		results: 'Enables scholars to write, cite, and publish with AI-powered tools',
@@ -388,16 +417,16 @@ export const projects: Project[] = [
 		features: [
 			'Full-stack personality test platform analyzing 19 traits',
 			'Reduced page load times by 60% with Redis caching and database query optimization',
-			'Expanded product offerings by 400% (from 2 to 10 PDF reports) with automated PDF generation',
+			'Built 10 PDF report types covering personality insights, coaching, and career matching',
 			'30+ custom PHP files: Google OAuth integration, custom login/registration overrides, AES-256 encrypted email verification flow',
 			'Enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin CRUD UI',
 			'Tiered bulk pricing system and WooCommerce template overrides for checkout, reviews, and product pages',
-			'Facebook Conversions API integration for server-side event tracking (registration, purchase, add-to-cart)',
+			'Implemented Facebook Pixel and Conversions API for event tracking (registration, purchase, add-to-cart)',
 			'Klaviyo API integration for email marketing automation, subscriber management, and custom events',
 			'Custom REST API endpoints for cross-subdomain auth between WordPress and Next.js test app',
 			'Custom MCP server integrating test results with LLMs for personalized feedback',
 			'Euclidean distance algorithms to match user personality profiles with career paths',
-			'99.9% uptime with GCE VMs, Nginx, Redis caching, and MySQL optimization'
+			'Improved page load times with Redis caching and PostgreSQL for session and user data'
 		],
 		tech: [
 			'Next.js',
@@ -476,6 +505,7 @@ export const techStack: TechStack[] = [
 			'WordPress',
 			'Redis',
 			'MySQL',
+			'SQLite',
 			'MongoDB',
 			'GraphQL',
 			'REST APIs',

@@ -81,6 +81,7 @@ export const skillCategories: SkillCategory[] = [
 			'Redis',
 			'PostgreSQL',
 			'MySQL',
+			'SQLite',
 			'MongoDB',
 			'REST APIs',
 			'MCP Servers',
@@ -102,11 +103,21 @@ export const experiences: ExperienceItem[] = [
 		title: 'Full-Stack Developer',
 		company: 'SkywalkLab',
 		url: 'skywalklab.com',
-		skills: ['SvelteKit', 'TypeScript', 'Vite', 'AI Integration', 'Three.js', 'GSAP', 'i18n'],
+		skills: [
+			'SvelteKit',
+			'TypeScript',
+			'Vite',
+			'AI Integration',
+			'SQLite',
+			'Three.js',
+			'GSAP',
+			'i18n'
+		],
 		years: "'25 - Now",
 		descriptions: [
 			'Founded a web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites.',
-			'Architected 61+ component library with custom Vite plugins (SEO, icons, vendor) and multi-stage Docker builds.'
+			'Architected 90+ component library with custom Vite plugins (SEO, icons, vendor) and multi-stage Docker builds.',
+			'Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data.'
 		]
 	},
 	{
@@ -115,11 +126,10 @@ export const experiences: ExperienceItem[] = [
 		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
 		years: "'24 - '26",
 		descriptions: [
-			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 platforms.',
-			'Enabled AI-powered user support across 2 LLM providers by developing a custom MCP server.',
-			'Built a shared component library used across 3 Inkwell products (Inkwell, Press, Publishers), ensuring brand consistency and reducing development time.',
-			'Streamlined subscription management by building admin dashboards with Stripe integration for payment processing and analytics.',
-			'Improved onboarding and retention by producing demo videos with Premiere Pro, reducing learning curve and increasing stickiness.'
+			'Reduced content creation time by 90% by building a TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms.',
+			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support.',
+			'Automated B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns.',
+			'Built a shared component library used across 3 Inkwell products (Inkwell, Press, Publishers), ensuring brand consistency and reducing development time.'
 		]
 	},
 	{
@@ -141,11 +151,11 @@ export const experiences: ExperienceItem[] = [
 		years: "'23 - '26",
 		descriptions: [
 			'Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL.',
-			'Achieved 99.9% uptime and reduced page load times by 60% through Redis caching, database optimization, and GCE infrastructure.',
-			'Expanded product offerings by 400% (2 to 10 PDF reports) by building automated PDF generation and mapping traits to ONET work styles.',
+			'Improved page load times with Redis caching and PostgreSQL for session and user data.',
+			'Built 10 PDF report types covering personality insights, coaching, and career matching.',
 			'Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs.',
 			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin interface.',
-			'Led cross-functional team of 3 and coordinated with academic partners to drive product development.'
+			'Managed team of 3 and served as primary liaison with academic partners.'
 		]
 	},
 	{
@@ -154,9 +164,9 @@ export const experiences: ExperienceItem[] = [
 		skills: ['Nunjucks', 'SASS', 'PostgreSQL', 'Webpack', 'Express'],
 		years: "'21 - '26",
 		descriptions: [
-			'Built interactive data visualizations and comparison tools for 10,000+ institutions using Nunjucks, SASS, and TypeScript.',
-			'Enabled data-driven college decisions by integrating BLS and NCES APIs with ROI calculations in a degree finder tool.',
-			'Reduced hero image creation time by 95% by developing a dynamic SVG-based generator for thousands of pages.'
+			'Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions.',
+			'Built degree finder with parallel PostgreSQL queries across federal education and labor datasets for ROI calculations.',
+			'Created SVG template system generating unique hero images for thousands of pages.'
 		]
 	}
 ];
