@@ -34,6 +34,7 @@ CHARACTER LIMITS (CRITICAL - must fit on one page):
 - All text fields must be same length or shorter than the original CV 
 
 RULES:
+- Skills must be copied EXACTLY from the skillCategories arrays - do not rephrase, combine, or invent new skills
 - Do NOT invent experience or skills Tommy doesn't have
 - NEVER change the years/dates - use them exactly as they appear in the source data
 - Only reframe, reorder, or emphasize existing skills and accomplishments
