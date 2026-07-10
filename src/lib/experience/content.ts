@@ -282,7 +282,7 @@ export const projects: Project[] = [
 			'Created SVG template system generating unique hero images for thousands of pages',
 			'Built data visualizations for college and academics rankings',
 			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking with GDPR-compliant cookie consent',
-			'Generated campaign spreadsheets with Google Scripts for GMASS email automation',
+			'Wrote scripts to automatically build and populate marketing spreadsheets for mass email campaigns',
 			'Deployed cross-platform mobile app to iOS and Android powered by Academic Influence data',
 			'Implemented offline-first architecture with automatic data syncing for mobile app',
 			'Integrated push notifications for college updates and alerts in mobile app'
@@ -346,7 +346,7 @@ export const projects: Project[] = [
 			'Developed 30+ custom PHP files for Google OAuth integration, custom login/registration overrides, and AES-256 encrypted email verification flow',
 			'Built enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin interface',
 			'Implemented tiered bulk pricing system and WooCommerce template overrides for checkout, reviews, and product pages',
-			'Implemented Facebook Pixel and Conversions API for event tracking (registration, purchase, add-to-cart)',
+			'Implemented Facebook Pixel and Conversions API for client and server event tracking (registration, purchase, add-to-cart)',
 			'Integrated Klaviyo API for email marketing automation, subscriber management, and custom events',
 			'Built custom REST API endpoints for cross-subdomain auth between WordPress and Next.js test app',
 			'Enabled AI-powered analysis by developing a custom MCP server integrating test results with LLMs',
