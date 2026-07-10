@@ -49,8 +49,8 @@ export function formatProjects(items: Project[]): string {
 					`## ${item.name}
 Url: ${item.url ?? 'None'}
 Tagline: ${item.tagline}
-Description: ${item.description}
-Features:\n${markdownList(item.features)}
+Company Description: ${item.description}
+Responsibilities:\n${markdownList(item.responsibilities)}
 Tech:\n${markdownList(item.tech)}
 Results: ${item.results}`
 			)
@@ -102,7 +102,7 @@ export function formatCVExperiences(items: ExperienceItem[]): string {
 Url: ${item.url ?? 'None'}
 Years: ${item.years}
 Skills:\n${markdownList(item.skills)}
-Descriptions:\n${markdownList(item.descriptions)}`
+Responsibilities:\n${markdownList(item.responsibilities)}`
 			)
 			.join('\n\n')
 	);

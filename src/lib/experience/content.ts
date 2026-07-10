@@ -1,129 +1,53 @@
-import type {
-	ClientProject,
-	ClientService,
-	ContactInfo,
-	ProcessStep,
-	Project,
-	Service,
-	TechStack
-} from './types.js';
-
-export const clientProjects: ClientProject[] = [
-	{
-		name: 'Academic Influence',
-		tagline: 'Academic Rankings Platform',
-		description:
-			'A comprehensive platform helping students compare 10,000+ colleges and universities',
-		outcomes: [
-			'Interactive college comparison platform with NCES IPEDS data across 10,000+ institutions',
-			'Degree finder with 12+ parallel PostgreSQL queries across IPEDS, BLS, CIP, SOC, and COLI datasets',
-			'ROI calculations including time-to-recoup, salary projections, and cost-of-living adjustments',
-			'Multi-table JOINs with aggregations, subqueries, and weighted averages',
-			'Created SVG template system generating unique hero images for thousands of pages',
-			'Handles millions of data points with instant search results',
-			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking, with GDPR-compliant cookie consent',
-			'Generated campaign spreadsheets with Google Scripts for GMASS email automation'
-		],
-		results:
-			'Empowering students to make informed decisions about their education with fast, reliable data'
-	},
-	{
-		name: 'Inkwell',
-		tagline: 'Academic Publishing Platform - AI & Infrastructure',
-		description:
-			'Marketing pages, AI chatbot, administrative tools, and custom MCP server for an academic writing platform',
-		outcomes: [
-			'Built TypeScript automation pipeline with local open-source AI, querying YouTube API, generating scripts, and creating videos via Pictory API',
-			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
-			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
-			'B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
-			'Shared component library across 3 Inkwell products ensuring brand consistency',
-			'Admin dashboards with Stripe integration for payment processing and analytics',
-			'Configured Google Analytics events and Google Ads conversion tracking for subscription and trial-to-purchase funnels',
-			'Implemented Facebook Pixel for conversion tracking',
-			'Demo videos with Premiere Pro improving onboarding and retention'
-		],
-		results:
-			'Supporting an academic writing platform with intelligent assistance and seamless user experience'
-	},
-	{
-		name: 'Inkwell Press & Studio',
-		tagline: 'Publishing Platform Suite',
-		description:
-			'A complete publishing ecosystem with multiple applications and shared component library',
-		outcomes: [
-			'Built two complete publishing applications from the ground up',
-			'Created reusable component library for consistent design across all apps',
-			'Developed shared styles and plugins for publishing workflows',
-			'40%+ faster development through code reuse',
-			'Unified user experience across the entire Inkwell ecosystem'
-		],
-		results:
-			'Enabling rapid development and consistent quality across multiple publishing applications'
-	},
-	{
-		name: 'Success Portraits',
-		tagline: 'Career Assessment Platform',
-		description:
-			'An AI-powered personality assessment platform with custom licensing system and MCP server',
-		outcomes: [
-			'Full-stack platform analyzing 19 personality traits',
-			'Improved page load times with Redis caching and query optimization',
-			'Expanded offerings by 400% (2 to 10 PDF reports) with automated generation',
-			'Customized WordPress/WooCommerce with 30+ PHP files: Google OAuth, custom auth flows, AES-256 encrypted email verification, tiered bulk pricing',
-			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin CRUD interface',
-			'Implemented Facebook Pixel and Conversions API for event tracking, plus Klaviyo API for email marketing automation',
-			'Custom REST API endpoints for cross-subdomain authentication between WordPress and Next.js app',
-			'Custom MCP server integrating test results with LLMs for personalized feedback',
-			'Euclidean distance algorithms matching personality profiles to career paths',
-			'Improved page load times with Redis caching and PostgreSQL for session and user data'
-		],
-		results:
-			'Helping individuals discover career paths with enterprise-grade licensing and AI analysis'
-	},
-	{
-		name: 'Nuisiout',
-		tagline: 'Service Business Website',
-		description: 'A multilingual website for a French pest control company',
-		outcomes: [
-			'French-language site optimized for local search',
-			'Service catalog with pricing and online booking',
-			'Contact forms and automated email responses',
-			'Blog for SEO and customer education',
-			'Fast loading and mobile-friendly design'
-		],
-		results: 'Increased online visibility and customer inquiries through SEO optimization'
-	},
-	{
-		name: 'College Compare App',
-		tagline: 'Mobile Education App',
-		description: 'A mobile app for comparing colleges on iPhone and Android',
-		outcomes: [
-			'One codebase deployed to both iOS and Android',
-			'Works offline with automatic data syncing',
-			'Native-feeling UI with smooth performance',
-			'Push notifications for updates'
-		],
-		results: 'Students can research colleges on-the-go with a native mobile experience'
-	}
-];
-
-export const clientSpecializations: string[] = [
-	'Custom Web Applications',
-	'AI-Powered Features',
-	'Workflow Automation',
-	'Content Management Systems',
-	'Mobile Apps (iOS & Android)',
-	'E-commerce & Online Payments',
-	'Marketing & Analytics',
-	'Multilingual Websites',
-	'Educational Platforms',
-	'Document Management',
-	'WordPress Development',
-	'Fast & Reliable Hosting'
-];
+import type { ContactInfo, ProcessStep, Project, Service, TechStack } from './types.js';
 
 export const services: Service[] = [
+	{
+		category: 'websites',
+		title: 'Custom Web Applications',
+		shortTitle: 'Applications',
+		description: 'Websites that actually perform',
+		longDescription:
+			'Hand-coded websites built for your business—no templates, no page builders. Fast, works on every device, and flexible enough to add features as you grow.',
+		lucide_icon: 'code',
+		items: [
+			'Custom-built websites with no templates or page builders',
+			'Responsive design for all devices',
+			'Modern frontend frameworks (SvelteKit, Next.js, React)',
+			'SEO-optimized architecture',
+			'Accessibility compliance (WCAG)'
+		],
+		benefits: [
+			'Fast-loading, mobile-optimized websites that work on any device',
+			'Easy-to-update content management systems',
+			'Advanced search and filtering to help users find what they need',
+			'Real-time features for interactive experiences',
+			'Scalable architecture that grows with your business'
+		]
+	},
+	{
+		category: 'ecommerce',
+		title: 'E-commerce & Payments',
+		shortTitle: 'E-commerce',
+		description: 'Sell online, get paid',
+		longDescription:
+			'Secure payments, checkout that converts. Products, subscriptions, services—with inventory management and fraud protection.',
+		lucide_icon: 'shopping-cart',
+		items: [
+			'Stripe payment integration',
+			'WooCommerce customization',
+			'Subscription and recurring billing',
+			'Inventory management',
+			'Checkout optimization',
+			'Fraud protection setup'
+		],
+		benefits: [
+			'Accept credit cards, Apple Pay, and Google Pay',
+			'Manage subscriptions and recurring billing',
+			'Secure checkout process with fraud protection',
+			'Inventory management and order tracking',
+			'Automated invoicing and payment reports'
+		]
+	},
 	{
 		category: 'cms',
 		title: 'Headless CMS & Content Management',
@@ -303,7 +227,7 @@ export const projects: Project[] = [
 	// 	tagline: 'Headless CMS Monorepo',
 	// 	description: 'Modern decoupled architecture with Payload CMS backend and SvelteKit frontend',
 	//  years: "'25 - Now",
-	// 	features: [
+	// 	responsibilities: [
 	// 		'Monorepo with separate CMS and website apps',
 	// 		'GraphQL API',
 	// 		'Lexical editor',
@@ -316,10 +240,11 @@ export const projects: Project[] = [
 		name: 'SkywalkLab',
 		role: 'Founder & Full-Stack Developer',
 		tagline: 'Web Agency',
-		description: 'Web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites',
+		description:
+			'Web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites',
 		years: "'25 - Now",
-		features: [
-			'Lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data',
+		responsibilities: [
+			'Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data',
 			'Custom web apps, e-commerce platforms, and multilingual sites for clients',
 			'AI-powered workflow automations'
 		],
@@ -333,7 +258,7 @@ export const projects: Project[] = [
 		tagline: 'Comprehensive Component Library',
 		description: 'Agency-wide reusable Svelte 5 components across all Skywalk Lab projects',
 		years: "'24 - Now",
-		features: [
+		responsibilities: [
 			'90+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)',
 			'Custom Vite plugins (SEO, icons, vendor)',
 			'Multi-stage Docker builds',
@@ -345,42 +270,34 @@ export const projects: Project[] = [
 		results: '40%+ faster development, consistent UX across client sites'
 	},
 	{
-		name: 'Inkwell Press & Studio',
-		role: 'Full-Stack Developer',
-		tagline: 'Publishing Ecosystem with Shared Component Library',
-		description:
-			'Complete publishing platform suite including Inkwell Press, Inkwell Studio, and shared component library',
-		years: "'24 - '26",
-		features: [
-			'Shared component library with reusable Svelte 5 components',
-			'Consistent styles and design system across all Inkwell properties',
-			'Custom plugins and utilities for publishing workflows',
-			'Private GitHub npm registry with automated versioning',
-			'Inkwell Press and Inkwell Studio applications',
-			'Watch/rebuild workflow for rapid development'
-		],
-		tech: ['Svelte 5', 'TypeScript', 'npm workspaces', 'automated publishing'],
-		results:
-			'Unified ecosystem enabling consistent UX and faster development across all Inkwell properties',
-		url: 'https://press.inkwell.net'
-	},
-	{
 		name: 'Academic Influence',
 		role: 'Full-Stack Developer',
-		tagline: 'Comprehensive Academic Intelligence Platform',
+		tagline: 'Academic Intelligence Platform with Mobile Apps',
 		description: 'Large-scale academic ranking and data platform with millions of data points',
 		years: "'21 - '26",
-		features: [
-			'Interactive college comparison platform with NCES IPEDS data across 10,000+ institutions',
-			'Degree finder with 12+ parallel PostgreSQL queries across IPEDS, BLS, CIP, SOC, and COLI datasets',
-			'ROI calculations including time-to-recoup, salary projections, and cost-of-living adjustments',
-			'Multi-table JOINs with aggregations, subqueries, and weighted averages',
+		responsibilities: [
+			'Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions',
+			'Developed degree finder executing 12+ parallel PostgreSQL queries across IPEDS, BLS, CIP, SOC, and COLI datasets',
+			'Calculated ROI metrics including time-to-recoup, salary projections, and cost-of-living adjustments using multi-table JOINs with aggregations and weighted averages',
 			'Created SVG template system generating unique hero images for thousands of pages',
-			'Complex data visualization and sports data',
-			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking, with GDPR-compliant cookie consent',
-			'Generated campaign spreadsheets with Google Scripts for GMASS email automation'
+			'Built data visualizations for college and academics rankings',
+			'Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking with GDPR-compliant cookie consent',
+			'Generated campaign spreadsheets with Google Scripts for GMASS email automation',
+			'Deployed cross-platform mobile app to iOS and Android powered by Academic Influence data',
+			'Implemented offline-first architecture with automatic data syncing for mobile app',
+			'Integrated push notifications for college updates and alerts in mobile app'
 		],
-		tech: ['Nunjucks', 'SASS', 'TypeScript', 'PostgreSQL', 'Webpack', 'Express'],
+		tech: [
+			'Nunjucks',
+			'SASS',
+			'TypeScript',
+			'PostgreSQL',
+			'Webpack',
+			'Express',
+			'SvelteKit',
+			'Capacitor',
+			'Ionic'
+		],
 		results: 'Handles massive datasets with sub-second query times',
 		url: 'https://academicinfluence.com'
 	},
@@ -391,18 +308,28 @@ export const projects: Project[] = [
 		description:
 			'Sophisticated writing platform with AI assistance, document processing, and custom MCP server',
 		years: "'24 - '26",
-		features: [
-			'Built TypeScript automation pipeline with local open-source AI for content creation',
-			'YouTube API integration for transcript retrieval, script generation, and Pictory API video creation',
-			'Auto-posting to Facebook and Instagram via Meta CAPI, YouTube via API, with TikTok upload assist (auto-download and clipboard copy)',
-			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
-			'B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
-			'Shared component library used across 3 Inkwell products (Inkwell, Press, Publishers)',
-			'Admin dashboards with Stripe integration for payment processing and analytics',
+		responsibilities: [
+			'Built TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms',
 			'Configured Google Analytics events and Google Ads conversion tracking for subscription and trial-to-purchase funnels',
-			'Implemented Facebook Pixel for conversion tracking'
+			'Implemented Facebook Pixel for conversion tracking',
+			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support',
+			'Automated B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns',
+			'Built admin dashboards with Stripe integration for payment processing and analytics',
+			'Produced demo videos with Premiere Pro to improve onboarding and retention',
+			'Developed Inkwell Press and Inkwell Studio sites extending the platform into publishing and book production services',
+			'Built a shared component library used across 3 Inkwell products (Inkwell, Press, Publishers), ensuring brand consistency and reducing development time',
+			'Developed custom plugins and utilities for Press and Studio publishing workflows with private GitHub npm registry'
 		],
-		tech: ['SvelteKit 5', 'TypeScript', 'SASS', 'MCP', 'Stripe', 'YouTube API', 'Pictory API'],
+		tech: [
+			'SvelteKit 5',
+			'TypeScript',
+			'SASS',
+			'MCP',
+			'Stripe',
+			'YouTube API',
+			'Pictory API',
+			'npm workspaces'
+		],
 		results: 'Enables scholars to write, cite, and publish with AI-powered tools',
 		url: 'https://inkwell.net'
 	},
@@ -413,19 +340,19 @@ export const projects: Project[] = [
 		description:
 			'AI-powered assessment platform with custom licensing system, MCP server, and heavily customized WordPress/WooCommerce backend',
 		years: "'23 - '26",
-		features: [
-			'Full-stack personality test platform analyzing 19 traits',
-			'Improved page load times with Redis caching and PostgreSQL for session and user data',
+		responsibilities: [
+			'Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL',
 			'Built 10 PDF report types covering personality insights, coaching, and career matching',
-			'30+ custom PHP files: Google OAuth integration, custom login/registration overrides, AES-256 encrypted email verification flow',
-			'Enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin CRUD UI',
-			'Tiered bulk pricing system and WooCommerce template overrides for checkout, reviews, and product pages',
+			'Developed 30+ custom PHP files for Google OAuth integration, custom login/registration overrides, and AES-256 encrypted email verification flow',
+			'Built enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin interface',
+			'Implemented tiered bulk pricing system and WooCommerce template overrides for checkout, reviews, and product pages',
 			'Implemented Facebook Pixel and Conversions API for event tracking (registration, purchase, add-to-cart)',
-			'Klaviyo API integration for email marketing automation, subscriber management, and custom events',
-			'Custom REST API endpoints for cross-subdomain auth between WordPress and Next.js test app',
-			'Custom MCP server integrating test results with LLMs for personalized feedback',
-			'Euclidean distance algorithms to match user personality profiles with career paths',
-			'Improved page load times with Redis caching and PostgreSQL for session and user data'
+			'Integrated Klaviyo API for email marketing automation, subscriber management, and custom events',
+			'Built custom REST API endpoints for cross-subdomain auth between WordPress and Next.js test app',
+			'Enabled AI-powered analysis by developing a custom MCP server integrating test results with LLMs',
+			'Developed Euclidean distance algorithms to match user personality profiles with career paths',
+			'Improved page load times with Redis caching and PostgreSQL for session and user data',
+			'Managed team of 3 and served as primary liaison with academic partners'
 		],
 		tech: [
 			'Next.js',
@@ -453,28 +380,17 @@ export const projects: Project[] = [
 		tagline: 'French Pest Control Service Site',
 		description: 'Multilingual service website with SEO optimization',
 		years: "'25 - Now",
-		features: [
-			'Multilingual (French)',
-			'Service catalogs, pricing pages, contact forms, blog',
-			'Structured data markup, schema.org implementation'
+		responsibilities: [
+			'Built French-language site optimized for local search',
+			'Developed service catalog with pricing pages and online booking',
+			'Implemented contact forms with automated email responses',
+			'Created blog for SEO and customer education',
+			'Implemented structured data markup and schema.org for search visibility',
+			'Optimized for fast loading and mobile-friendly design'
 		],
 		tech: ['SvelteKit', '@skywalklab/lib', 'Netlify'],
 		results: 'Fast, SEO-optimized site with strong local search visibility',
 		url: 'https://nuisiout.fr'
-	},
-	{
-		name: 'College Compare Mobile App',
-		role: 'Full-Stack Developer',
-		tagline: 'Cross-Platform Education Tool',
-		description: 'Native mobile application for college comparison',
-		years: "'21 - '22",
-		features: [
-			'Single codebase deployed to iOS and Android',
-			'Offline-first data sync',
-			'Native UI components'
-		],
-		tech: ['SvelteKit', 'Capacitor', 'Ionic'],
-		results: 'Native performance with faster development cycle'
 	}
 ];
 
@@ -630,205 +546,19 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const specializations: string[] = [
+	'Full-Stack Web Applications (SvelteKit, Next.js)',
 	'Headless CMS (Payload, WordPress)',
 	'Monorepo Architecture',
 	'Component Libraries & Design Systems',
 	'AI Integration & Custom MCP Servers',
 	'Workflow Automation (n8n)',
+	'E-commerce & Payments (Stripe, WooCommerce)',
 	'Marketing & Analytics (Facebook CAPI, Klaviyo)',
+	'Internationalization & i18n (Paraglide)',
 	'Academic Technology',
 	'Publishing Platforms',
 	'Data Visualization',
 	'Mobile Apps (iOS/Android)'
-];
-
-export const clientServices: ClientService[] = [
-	{
-		category: 'websites',
-		title: 'Custom Web Applications',
-		shortTitle: 'Applications',
-		description: 'Websites that actually perform',
-		longDescription:
-			'Hand-coded websites built for your business—no templates, no page builders. Fast, works on every device, and flexible enough to add features as you grow.',
-		lucide_icon: 'code',
-		benefits: [
-			'Fast-loading, mobile-optimized websites that work on any device',
-			'Easy-to-update content management systems',
-			'Advanced search and filtering to help users find what they need',
-			'Real-time features for interactive experiences',
-			'Scalable architecture that grows with your business'
-		]
-	},
-	{
-		category: 'ai',
-		title: 'AI-Powered Solutions',
-		shortTitle: 'Solutions',
-		description: 'AI that actually does something useful',
-		longDescription:
-			'Chatbots that answer customer questions, tools that generate content, automation that runs while you sleep. Practical AI, not buzzword AI.',
-		lucide_icon: 'brain',
-		benefits: [
-			'AI chat assistants to answer customer questions 24/7',
-			'Automated content generation and writing assistance',
-			'Custom AI integrations with Model Context Protocol (MCP)',
-			'Personalized recommendations for your users',
-			'Workflow automation to reduce manual tasks'
-		]
-	},
-	{
-		category: 'automation',
-		title: 'Workflow Automation',
-		shortTitle: 'Automation',
-		description: 'Stop doing the same thing twice',
-		longDescription:
-			'Connect your apps and automate the repetitive stuff. Social media posting, data syncing, email sequences—workflows that run in the background.',
-		lucide_icon: 'workflow',
-		benefits: [
-			'Social media content creation and posting automation',
-			'AI-powered workflow automation with n8n',
-			'Automated marketing campaigns and email sequences',
-			'Custom automation workflows tailored to your business',
-			'Integration between apps and services',
-			'Scheduled tasks and trigger-based automations'
-		]
-	},
-	{
-		category: 'cms',
-		title: 'Content Management',
-		shortTitle: 'Content',
-		description: 'Update your site without calling us',
-		longDescription:
-			'Edit text, swap images, publish content—all from a dashboard. No developer needed for day-to-day updates.',
-		lucide_icon: 'file-pen',
-		benefits: [
-			'Edit your website content anytime, from anywhere',
-			'Manage multiple languages from one dashboard',
-			'Organize images, videos, and documents efficiently',
-			'Preview changes before publishing',
-			'Flexible publishing workflows for team collaboration'
-		]
-	},
-	{
-		category: 'mobile',
-		title: 'Mobile Apps',
-		shortTitle: 'Mobile',
-		description: 'Apps for iPhone and Android',
-		longDescription:
-			'One codebase, both app stores. Native performance, offline support, push notifications. We handle submission too.',
-		lucide_icon: 'smartphone',
-		benefits: [
-			'One app that works on iPhone and Android',
-			'Works offline with automatic syncing',
-			'Native performance and smooth animations',
-			'Push notifications to engage users',
-			'App store submission and updates'
-		]
-	},
-	{
-		category: 'ecommerce',
-		title: 'E-commerce & Payments',
-		shortTitle: 'E-commerce',
-		description: 'Sell online, get paid',
-		longDescription:
-			'Secure payments, checkout that converts. Products, subscriptions, services—with inventory management and fraud protection.',
-		lucide_icon: 'shopping-cart',
-		benefits: [
-			'Accept credit cards, Apple Pay, and Google Pay',
-			'Manage subscriptions and recurring billing',
-			'Secure checkout process with fraud protection',
-			'Inventory management and order tracking',
-			'Automated invoicing and payment reports'
-		]
-	},
-	{
-		category: 'international',
-		title: 'Multilingual Websites',
-		shortTitle: 'Multilingual',
-		description: 'Your site in multiple languages',
-		longDescription:
-			"Websites that speak your customers' languages. Local SEO, localized content, currency, and date formats—managed from one dashboard.",
-		lucide_icon: 'languages',
-		benefits: [
-			'Support for multiple languages and regions',
-			'Automatic language detection and switching',
-			'Localized content, currency, and date formats',
-			'SEO optimization for each language',
-			'GDPR and privacy compliance built-in'
-		]
-	},
-	{
-		category: 'education',
-		title: 'Educational Platforms',
-		shortTitle: 'Educational',
-		description: 'Tools for schools, universities, and online learning',
-		longDescription:
-			'Portals, assessments, and analytics for academic institutions. Integrated with federal education data for real outcomes.',
-		lucide_icon: 'graduation-cap',
-		benefits: [
-			'Student and faculty portals with role-based access',
-			'Assessment and testing tools with automatic grading',
-			'Data analytics and reporting dashboards',
-			'Integration with College Scorecard (U.S. Dept. of Education)',
-			'College Navigator and federal education databases',
-			'Bureau of Labor Statistics career and salary data',
-			'College comparison tools with real outcomes and earnings data',
-			'Collaboration tools for research teams',
-			'Integration with existing systems'
-		]
-	},
-	{
-		category: 'wordpress',
-		title: 'WordPress Solutions',
-		shortTitle: 'WordPress',
-		description: 'Custom WordPress applications and enterprise plugins',
-		longDescription:
-			'Enterprise plugins, headless setups, and WooCommerce stores. Full control with easy content updates.',
-		lucide_icon: 'blocks',
-		benefits: [
-			'Headless WordPress with modern frontend frameworks',
-			'Custom enterprise-grade WordPress plugins',
-			'Complex licensing and subscription management systems',
-			'WooCommerce online stores with payment processing',
-			'Custom themes and advanced functionality',
-			'WordPress as a headless CMS for React/Next.js apps',
-			'Easy content updates through WordPress',
-			'Ongoing maintenance and security updates'
-		]
-	},
-	{
-		category: 'marketing',
-		title: 'Marketing & Analytics',
-		shortTitle: 'Marketing',
-		description: "Know what's working",
-		longDescription:
-			'Clear analytics, conversion tracking, audience segmentation. Plus automated email campaigns that actually get opened.',
-		lucide_icon: 'chart-column-increasing',
-		benefits: [
-			'Facebook Pixel and Conversions API for accurate ad tracking',
-			'Google Analytics and Google Tag Manager integration',
-			'Klaviyo email marketing integration and automation',
-			'Conversion tracking across your website and ads',
-			'Analytics dashboards to understand your customers',
-			'Marketing automation workflows',
-			'Email campaign management and segmentation'
-		]
-	},
-	{
-		category: 'performance',
-		title: 'Performance & Hosting',
-		shortTitle: 'Performance',
-		description: 'Fast hosting that scales',
-		longDescription:
-			'Your site stays fast whether you have ten visitors or ten thousand. Optimized code, smart caching, auto-scaling infrastructure.',
-		lucide_icon: 'gauge',
-		benefits: [
-			'Lightning-fast page loads (under 2 seconds)',
-			'Reliable uptime with automatic backups',
-			'Handles traffic spikes without slowing down',
-			'Global content delivery for worldwide speed',
-			'24/7 monitoring and security protection'
-		]
-	}
 ];
 
 export const contactInfo: ContactInfo = {

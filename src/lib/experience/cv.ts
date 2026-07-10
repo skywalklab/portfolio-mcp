@@ -19,7 +19,7 @@ export interface ExperienceItem {
 	url?: string;
 	skills: string[];
 	years: string;
-	descriptions: string[];
+	responsibilities: string[];
 }
 
 export interface EducationItem {
@@ -127,7 +127,7 @@ export const experiences: ExperienceItem[] = [
 			'i18n'
 		],
 		years: "'25 - Now",
-		descriptions: [
+		responsibilities: [
 			'Founded a web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites.',
 			'Architected 90+ component library with custom Vite plugins (SEO, icons, vendor) and multi-stage Docker builds.',
 			'Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data.'
@@ -138,7 +138,7 @@ export const experiences: ExperienceItem[] = [
 		company: 'Inkwell',
 		skills: ['SvelteKit', 'TypeScript', 'PostgreSQL', 'Vite', 'SASS', 'MCP'],
 		years: "'24 - '26",
-		descriptions: [
+		responsibilities: [
 			'Built TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms.',
 			'Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support.',
 			'Automated B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns.',
@@ -162,12 +162,12 @@ export const experiences: ExperienceItem[] = [
 			'GCE'
 		],
 		years: "'23 - '26",
-		descriptions: [
+		responsibilities: [
 			'Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL.',
 			'Improved page load times with Redis caching and PostgreSQL for session and user data.',
 			'Built 10 PDF report types covering personality insights, coaching, and career matching.',
 			'Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs.',
-			'Built enterprise licensing system in PHP with master key generation, usage tracking, and admin interface.',
+			'Built enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin interface.',
 			'Managed team of 3 and served as primary liaison with academic partners.'
 		]
 	},
@@ -176,7 +176,7 @@ export const experiences: ExperienceItem[] = [
 		company: 'Academic Influence',
 		skills: ['Nunjucks', 'SASS', 'PostgreSQL', 'Webpack', 'Express'],
 		years: "'21 - '26",
-		descriptions: [
+		responsibilities: [
 			'Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions.',
 			'Built degree finder with parallel PostgreSQL queries across federal education and labor datasets for ROI calculations.',
 			'Created SVG template system generating unique hero images for thousands of pages.'

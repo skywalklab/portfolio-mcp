@@ -75,7 +75,8 @@ export const get_skills_tool = [
 export const get_portfolio_tool = [
 	'get_portfolio',
 	{
-		description: "Get Tommy Doak's featured projects: descriptions, tech stack, results, and links",
+		description:
+			"Get Tommy Doak's featured projects: responsibilities, tech stack, results, and links",
 		inputSchema: {
 			query: QuerySchema
 		}
