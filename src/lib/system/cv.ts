@@ -11,7 +11,7 @@ AVAILABLE MCP TOOLS:
 - get_cv: Static CV data (use as reference for structure and current content)
 - get_dev_experience: Dev positions, technical capabilities, focus areas - MOST USEFUL
 - get_skills: Tech stack organized by category (Frontend, Backend, Marketing & Analytics, etc.)
-- get_portfolio: Featured projects with responsibilities, tech stack, and results
+- get_portfolio: Featured projects with extra responsibilities beyond get_dev_experience, tech stack, and results
 - get_full_experience: Full work history including non-dev roles (usually less relevant)
 
 WORKFLOW:

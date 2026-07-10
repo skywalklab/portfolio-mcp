@@ -31,7 +31,7 @@ The result: instead of sending generic documents, I can provide materials specif
 | `get_dev_experience` | Technical roles, capabilities, services offered |
 | `get_full_experience` | Complete work history including non-dev roles |
 | `get_skills` | Tech stack organized by category |
-| `get_portfolio` | Featured projects with tech and outcomes |
+| `get_portfolio` | Featured projects with extra responsibilities, tech, and outcomes |
 | `get_education` | Academic background |
 | `get_contact_info` | Contact details |
 
