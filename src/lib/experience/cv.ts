@@ -120,7 +120,7 @@ export const experiences: ExperienceItem[] = [
     years: "'25 - Now",
     responsibilities: [
       "Founded a web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites.",
-      "Architected 90+ component library with custom Vite plugins (SEO, icons, vendor) and multi-stage Docker builds.",
+      "Architected TypeScript monorepo with pnpm workspaces, shared component library (90+ components, 17 categories), and type-safe cross-package imports serving multiple web applications and multi-stage Docker builds.",
       "Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data."
     ]
   },
