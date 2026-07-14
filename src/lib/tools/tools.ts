@@ -21,7 +21,7 @@ export async function full_experience_tool({ fileName }: { fileName: string }): 
   const filePath = getExpFilePath(fileName);
   const csv = fs.readFileSync(filePath, "utf-8");
 
-  const content = toolOutput("# Full Work Experience \n\n" + (await formatCSV(csv)));
+  const content = toolOutput("# Full Work Experience\n\n" + (await formatCSV(csv)));
   return content;
 }
 

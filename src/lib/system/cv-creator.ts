@@ -27,7 +27,7 @@ OUTPUT CONSTRAINTS:
 - companyName: the name of the company in the job description
 
 CHARACTER LIMITS (CRITICAL - must fit on one page):
-- Experience title: max 30 characters, use consistent format "Full-Stack Developer" (hyphenated) for all dev roles
+- Experience title: max 30 characters, use actual titles (Founder, Technical Lead, Full-Stack Developer, Marketing Technology, etc.)
 - Experience url: domain only, no https:// (e.g. "skywalklab.com" not "https://skywalklab.com")
 - Experience skills: max 4 skills per item
 - Each responsibility bullet: max 145 characters (aim for 110-130, never exceed 145)
