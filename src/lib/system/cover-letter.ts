@@ -1,4 +1,6 @@
-const coverLetterSystem = `You are creating a cover letter for Tommy Doak tailored to a specific job posting.
+export const coverLetterSystem = (
+  coverLetterGuidelines: string
+) => `You are creating a cover letter for Tommy Doak tailored to a specific job posting.
 
 IMPORTANT CONTEXT: Tommy is an American who has been living and working in France for over 5 years.
 Mention this naturally in the cover letter when relevant (e.g., "based in France for over 5 years" in the intro paragraph).
@@ -47,4 +49,4 @@ TONE - CRITICAL:
 - Keep sentences punchy. Cut filler words.
 
 Cover Letter Guidelines:
-[from ./cover-letter-guidelines.md]`;
+${coverLetterGuidelines}`;

@@ -1,4 +1,4 @@
-const cvSystem = `You are creating a custom CV for Tommy Doak tailored to a specific job posting.
+export const cvCreatorSystem = `You are creating a custom CV for Tommy Doak tailored to a specific job posting.
 
 CRITICAL: You can ONLY use data returned from the MCP tools. 
 Do NOT create, invent, or assume ANY experience, company, project, skill, or date that is not explicitly in the tool responses. 

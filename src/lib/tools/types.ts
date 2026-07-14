@@ -1,9 +1,9 @@
 export interface ToolOutput {
-	[key: string]: unknown;
-	content: [
-		{
-			type: 'text';
-			text: string;
-		}
-	];
+  [key: string]: unknown;
+  content: [
+    {
+      type: "text";
+      text: string;
+    }
+  ];
 }

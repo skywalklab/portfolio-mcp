@@ -64,13 +64,11 @@ Example:
 
 First sentence: Summarize the user's most relevant achievement with **specific metrics and impact**.
 
-Second sentence: Express excitement and set up the skill matches.
+Second sentence: Bridge naturally to why this role makes sense. Don't use setup lines like "Here are three reasons I'm a fit" - just flow into your examples.
 
-Template:
+Example:
 
-> "Over the last [X time], I've [specific achievement with measurable impact].
->
-> And now I'm excited to continue my journey by contributing and growing at [COMPANY]. There are three things that make me the perfect fit for this position:"
+> "Over the last [X time], I've [specific achievement with measurable impact]. The [ROLE] role caught my attention because [specific connection to their work]."
 
 **Be specific, not vague:**
 
@@ -89,9 +87,9 @@ Template:
 
 Write 2 paragraphs connecting the user's experience to the job requirements.
 
-**Focus each paragraph on ONE strong project.** Don't list multiple achievements - go deep on a single example that directly maps to a key job requirement. 4-5 sentences per project.
+**Focus each paragraph on ONE strong project.** Don't list multiple achievements - go deep on a single example that directly maps to a key job requirement. 3-4 sentences per project.
 
-**Use transition words:** Start paragraphs with "First,...", "Second,...", and use "Finally,..." for the Why This Company section.
+**Vary your transitions.** Don't use numbered lists like "First," "Second," "Finally" - these scream template. Instead, let each paragraph flow from the previous one naturally, or start with the theme itself.
 
 **Each paragraph follows this format:**
 
@@ -115,11 +113,11 @@ Write 2 paragraphs connecting the user's experience to the job requirements.
 
 **Example (Theme: Driven by Curiosity):**
 
-> "I've always been driven to understand systems deeply, not just use them. As a frontend developer at a fintech startup, I noticed our API calls were causing performance issues. Rather than just flagging it, I dug into the backend codebase, identified N+1 query problems, and proposed a solution. This led to me taking on full-stack responsibilities and eventually architecting our GraphQL layer, reducing page load times by 60%."
+> "I like understanding systems deeply, not just using them. As a frontend developer at a fintech startup, I noticed our API calls were dragging. I dug into the backend, found N+1 query problems, and proposed a fix. That led to full-stack responsibilities and eventually architecting our GraphQL layer—page loads dropped 60%."
 
 **Example (Theme: Taking Initiative):**
 
-> "I believe in solving problems before they become blockers. When our team's deployment process was taking 45 minutes and frequently failing, I spent a weekend setting up a proper CI/CD pipeline with GitHub Actions and Docker. Deployments now take 8 minutes with zero manual intervention, and the team ships twice as often."
+> "Our deployment process was taking 45 minutes and failing constantly. I spent a weekend setting up CI/CD with GitHub Actions and Docker. Now it takes 8 minutes, no manual steps, and the team ships twice as often."
 
 ---
 
@@ -133,19 +131,20 @@ Connect the user's interests/values to something specific about the company. Con
 - What values do they feature on their homepage?
 - Does the user have experience with their product?
 
-Template:
+Keep it brief and specific—one or two sentences. Don't use "Finally," as a transition.
 
-> "Finally, I'm excited about [COMPANY]'s vision and core values. [Specific value/aspect] stands out to me because [reason tied to user's experience]. [Topical observation about company] appeals to me because [why]."
+Example:
+
+> "I've been following [COMPANY]'s work on [specific thing] and it's the kind of problem I want to spend my time on."
 
 ---
 
 ### 5. Conclusion
 
-Short and direct:
+Keep it short. Don't summarize or restate—just close.
 
-> "I think you'll find that my experience is a really good fit for [COMPANY] and specifically this position. I'm ready to take my skills to the next level with your team and look forward to hearing back.
+> "I'd love to chat more about this. Thanks for reading.
 >
-> Thanks,
 > [Name]"
 
 ---
@@ -164,19 +163,16 @@ Short and direct:
 
 ## Complete Example
 
-I'm a full-stack developer with 3 years of experience building scalable web applications, and I'm excited to learn more about the Senior Software Engineer role at Stripe.
+I'm a full-stack developer with 3 years of experience building scalable web applications. The Senior Software Engineer role at Stripe caught my eye.
 
-Over the last two years, I've led the development of a SaaS platform that grew from 0 to 15,000 users, handling payment processing, real-time notifications, and complex state management across web and mobile clients.
+Over the last two years, I led development of a SaaS platform that grew from 0 to 15,000 users—payment processing, real-time notifications, complex state management across web and mobile. The role here looks like a good next step.
 
-And now I'm excited to continue my journey by contributing and growing at Stripe. There are three things that make me a strong fit for this position:
+At my current company, our checkout flow had a 12% abandonment rate from slow load times. I profiled it, found bottlenecks in payment validation, and rewrote it with Web Workers and optimistic UI. Perceived latency dropped 70%, abandonment fell to 4%. I've since become the go-to for performance work.
 
-First, I thrive on solving complex technical challenges. At my current company, our checkout flow had a 12% abandonment rate due to slow load times. I profiled the application, identified bottlenecks in our payment validation logic, and rewrote it using Web Workers and optimistic UI updates. This reduced perceived latency by 70% and dropped abandonment to 4%. I've since become the go-to person for performance optimization across our engineering team.
+I also care about developer experience. When I joined, test coverage was 20% and deploys were stressful. I set up Jest and Cypress, wrote testing docs, and paired with teammates on their first tests. We're at 80% coverage now, and I've mentored three junior devs who've become solid contributors.
 
-Second, I care deeply about code quality and developer experience. When I joined, our test coverage was at 20% and deployments were nerve-wracking. I introduced a testing culture by setting up Jest and Cypress, writing documentation on testing patterns, and pairing with teammates on their first tests. We're now at 80% coverage, and I've mentored three junior developers who've grown into confident contributors.
+I've integrated Stripe into two production apps and always liked the API design. Working on tools that thousands of engineers use daily is the kind of impact I'm after.
 
-Finally, I'm genuinely excited about Stripe's mission to increase the GDP of the internet. I've integrated Stripe into two production applications and have always been impressed by the API design and documentation. The opportunity to work on developer tools that thousands of engineers rely on daily is exactly the kind of impact I want to have.
+Would be great to chat more about this.
 
-I think you'll find that my experience is a strong fit for Stripe and this role specifically. I'm ready to contribute to your team and look forward to hearing back.
-
-Thanks,
 Tommy Doak
