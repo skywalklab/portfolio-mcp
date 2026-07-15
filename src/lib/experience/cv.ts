@@ -1,6 +1,7 @@
 export interface ContactPoint {
   type: string;
   text: string;
+  resumeText?: string;
   lucide_icon?: string;
   img?: string;
   href?: string;
@@ -30,7 +31,12 @@ export interface EducationItem {
 
 export const contactPoints: ContactPoint[] = [
   { type: "Position", text: "Full-Stack Development • AI Automation • MarTech", lucide_icon: "user" },
-  { type: "Location", text: "Nice, France", lucide_icon: "map-pin" },
+  {
+    type: "Location",
+    text: "Nice, France (EU resident)",
+    resumeText: "Nice, France (US citizen)",
+    lucide_icon: "map-pin"
+  },
   { type: "Email", text: "tcdoak@gmail.com", lucide_icon: "mail" },
   {
     type: "Website",
