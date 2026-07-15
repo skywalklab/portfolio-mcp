@@ -158,7 +158,7 @@ export const experiences: ExperienceItem[] = [
     responsibilities: [
       "Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions.",
       "Built degree finder with parallel PostgreSQL queries across federal education and labor datasets for ROI calculations.",
-      "Created SVG template system generating unique hero images for thousands of pages."
+      "Deployed cross-platform mobile app to iOS and Android with offline-first architecture and REST API sync for college rankings data"
     ]
   }
 ];

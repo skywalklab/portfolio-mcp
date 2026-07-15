@@ -282,7 +282,7 @@ export const projects: Project[] = [
       "Built data visualizations for college and academics rankings",
       "Implemented Google Tag Manager with dataLayer for page views, conversion events, and affiliate click tracking with GDPR-compliant cookie consent",
       "Wrote scripts to automatically build and populate marketing spreadsheets for mass email campaigns",
-      "Deployed cross-platform mobile app to iOS and Android powered by Academic Influence data",
+      "Deployed cross-platform mobile app to iOS and Android with offline-first architecture and REST API sync for college rankings data",
       "Implemented offline-first architecture with automatic data syncing for mobile app",
       "Integrated push notifications for college updates and alerts in mobile app"
     ],
