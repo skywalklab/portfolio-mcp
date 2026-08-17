@@ -3,3 +3,7 @@ build
 .env
 faq.ts
 src/lib/jobs
+
+.claude/resources/*
+.claude/skills/**/SKILL.md
+src/interview-practice/*
