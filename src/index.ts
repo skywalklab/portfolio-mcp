@@ -39,7 +39,7 @@ const authorizationMiddleware = (req: Request, res: Response, next: NextFunction
     return res.status(401).json({ error: "Missing or invalid authorization header" });
   }
 
-  if (token !== process.env.PORTFOLIO_API_TOKEN) {
+  if (token !== env.PORTFOLIO_API_TOKEN) {
     return res.status(403).json({ error: "Invalid token" });
   }
 
