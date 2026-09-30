@@ -56,7 +56,7 @@ app.post("/", authorizationMiddleware, async (req, res) => {
       transport = transports[sessionId];
     } else if (!sessionId && isInitializeRequest(req.body)) {
       transport = new StreamableHTTPServerTransport({
-        sessionIdGenerator: () => crypto.randomUUID(),
+        sessionIdGenerator: undefined,
         onsessioninitialized: (sessionId) => {
           transports[sessionId] = transport;
         },
