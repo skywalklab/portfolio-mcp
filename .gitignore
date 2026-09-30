@@ -9,3 +9,4 @@ src/lib/jobs
 src/interview-practice/*
 
 .wrangler/
+.dev.vars

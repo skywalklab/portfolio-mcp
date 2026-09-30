@@ -6,21 +6,20 @@ import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 import "dotenv/config";
 import { addTools } from "./lib/tools/add-tools.js";
 import { httpServerHandler } from "cloudflare:node";
+import { env } from "cloudflare:workers";
 
 const app = express();
 app.use(express.json());
 
 const allowedOrigins =
-  process.env.NODE_ENV === "production"
-    ? ["https://skywalklab.com"]
-    : ["http://localhost:3000", "http://localhost:5173"];
+  env.NODE_ENV === "production" ? ["https://skywalklab.com"] : ["http://localhost:3000", "http://localhost:5173"];
 
 const allowedHosts =
-  process.env.NODE_ENV === "production"
+  env.NODE_ENV === "production"
     ? ["portfolio-mcp.tommy-doak.workers.dev"]
     : ["localhost:8787", "localhost:3002", "127.0.0.1:3002"];
 
-const URL = process.env.NODE_ENV === "production" ? "" : "http://localhost:8787";
+const URL = env.NODE_ENV === "production" ? "" : "http://localhost:8787";
 
 app.use(
   cors({
