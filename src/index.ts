@@ -17,7 +17,7 @@ const allowedOrigins =
 
 const allowedHosts =
   process.env.NODE_ENV === "production"
-    ? ["srv1048573.hstgr.cloud", "srv1048573.hstgr.cloud:3002"]
+    ? ["https://portfolio-mcp.tommy-doak.workers.dev"]
     : ["localhost:8787", "localhost:3002", "127.0.0.1:3002"];
 
 const URL = process.env.NODE_ENV === "production" ? "" : "http://localhost:8787";
