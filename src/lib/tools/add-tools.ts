@@ -31,7 +31,7 @@ export const get_full_experience_tool = [
       query: QuerySchema
     }
   },
-  () => full_experience_tool({ fileName: "linkedin-positions.csv" })
+  (url: string) => full_experience_tool({ url, fileName: "linkedin-positions.csv" })
 ] as const;
 
 export const get_dev_experience_tool = [
@@ -43,8 +43,9 @@ export const get_dev_experience_tool = [
       query: QuerySchema
     }
   },
-  async () =>
+  async (url: string) =>
     await dev_experience_tool({
+      url,
       fileName: "linkedin-positions.csv",
       services,
       specializations,
@@ -83,7 +84,7 @@ export const get_education_tool = [
       query: QuerySchema
     }
   },
-  () => education_tool({ fileName: "linkedin-education.csv" })
+  (url: string) => education_tool({ url, fileName: "linkedin-education.csv" })
 ] as const;
 
 export const get_contact_info_tool = [
@@ -105,9 +106,9 @@ export const tools = {
   get_contact_info: get_contact_info_tool
 } as const;
 
-export const addTools = (server: McpServer) => {
+export const addTools = (server: McpServer, url: string) => {
   Object.values(tools).forEach((tool) => {
-    server.registerTool(tool[0], tool[1], tool[2]);
+    server.registerTool(tool[0], tool[1], () => tool[2](url));
   });
 };
 

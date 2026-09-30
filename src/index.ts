@@ -1,21 +1,26 @@
 import express, { type NextFunction, type Request, type Response } from "express";
 import cors from "cors";
-import { randomUUID } from "node:crypto";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 import "dotenv/config";
 import { addTools } from "./lib/tools/add-tools.js";
+import { httpServerHandler } from "cloudflare:node";
 
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = process.env.NODE_ENV === "production" ? ["https://skywalklab.com"] : ["http://localhost:3000"];
+const allowedOrigins =
+  process.env.NODE_ENV === "production"
+    ? ["https://skywalklab.com"]
+    : ["http://localhost:3000", "http://localhost:5173"];
 
 const allowedHosts =
   process.env.NODE_ENV === "production"
     ? ["srv1048573.hstgr.cloud", "srv1048573.hstgr.cloud:3002"]
-    : ["localhost:3002", "127.0.0.1:3002"];
+    : ["localhost:8787", "localhost:3002", "127.0.0.1:3002"];
+
+const URL = process.env.NODE_ENV === "production" ? "" : "http://localhost:8787";
 
 app.use(
   cors({
@@ -52,7 +57,7 @@ app.post("/", authorizationMiddleware, async (req, res) => {
       transport = transports[sessionId];
     } else if (!sessionId && isInitializeRequest(req.body)) {
       transport = new StreamableHTTPServerTransport({
-        sessionIdGenerator: () => randomUUID(),
+        sessionIdGenerator: () => crypto.randomUUID(),
         onsessioninitialized: (sessionId) => {
           transports[sessionId] = transport;
         },
@@ -70,7 +75,7 @@ app.post("/", authorizationMiddleware, async (req, res) => {
         version: "1.0.0"
       });
 
-      addTools(server);
+      addTools(server, URL);
 
       await server.connect(transport);
     } else {
@@ -135,7 +140,7 @@ app.post("/mcp", authorizationMiddleware, async (req, res) => {
     name: "portfolio-mcp-llm",
     version: "1.0.0"
   });
-  addTools(server);
+  addTools(server, URL);
 
   try {
     const transport: StreamableHTTPServerTransport = new StreamableHTTPServerTransport({
@@ -193,7 +198,7 @@ app.delete("/mcp", async (req, res) => {
   );
 });
 
-const PORT = process.env.PORT || 3002;
+const PORT: number = +(process.env.PORT || 3002);
 app.listen(PORT, (error) => {
   if (error) {
     console.error("Failed to start server:", error);
@@ -215,3 +220,4 @@ process.on("SIGINT", async () => {
   console.log("Server shutdown complete");
   process.exit(0);
 });
+export default httpServerHandler({ port: PORT });

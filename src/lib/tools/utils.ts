@@ -1,12 +1,12 @@
-import path, { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-import { parse } from "csv-parse";
+import { parse } from "csv-parse/sync";
 import type { ToolOutput } from "./types.js";
+import { env } from "cloudflare:workers";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+export async function getCsvFile(fileName: string, url: string): Promise<string> {
+  const res = await env.ASSETS.fetch(new URL(`/${fileName}`, url));
+  const csv = await res.text();
 
-export function getExpFilePath(fileName: string) {
-  return path.resolve(__dirname, `../experience/${fileName}`);
+  return csv;
 }
 
 export function toolOutput(text: string): ToolOutput {
@@ -21,16 +21,10 @@ export function toolOutput(text: string): ToolOutput {
 }
 
 export const processCsvFile = async (csv: string): Promise<Record<string, string>[]> => {
-  const parser = parse(csv, {
-    delimiter: ",",
-    trim: true,
-    columns: true
-  });
-
-  const records = [];
-  for await (const record of parser) {
-    records.push(record);
+  try {
+    return parse(csv, { delimiter: ",", trim: true, columns: true });
+  } catch (err) {
+    console.error("CSV parse failed:", (err as any).message);
+    throw err;
   }
-
-  return records;
 };

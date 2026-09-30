@@ -1,4 +1,3 @@
-import fs from "node:fs";
 import {
   formatContactInfo,
   formatCSV,
@@ -13,21 +12,20 @@ import {
   formatSpecializations
 } from "./format.js";
 import type { ToolOutput } from "./types.js";
-import { getExpFilePath, toolOutput } from "./utils.js";
+import { getCsvFile, toolOutput } from "./utils.js";
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from "../experience/types.js";
 import type { ContactPoint, EducationItem, ExperienceItem, SkillCategory } from "../experience/cv.js";
 
-export async function full_experience_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
-  const filePath = getExpFilePath(fileName);
-  const csv = fs.readFileSync(filePath, "utf-8");
+export async function full_experience_tool({ url, fileName }: { url: string; fileName: string }): Promise<ToolOutput> {
+  const csv = await getCsvFile(fileName, url);
 
   const content = toolOutput("# Full Work Experience\n\n" + (await formatCSV(csv)));
+
   return content;
 }
 
-export async function education_tool({ fileName }: { fileName: string }): Promise<ToolOutput> {
-  const filePath = getExpFilePath(fileName);
-  const csv = fs.readFileSync(filePath, "utf-8");
+export async function education_tool({ url, fileName }: { url: string; fileName: string }): Promise<ToolOutput> {
+  const csv = await getCsvFile(fileName, url);
 
   const content = toolOutput("# Education\n\n" + (await formatCSV(csv)));
   return content;
@@ -78,18 +76,19 @@ export function portfolio_tool({ projects }: { projects: Project[] }): ToolOutpu
 }
 
 export async function dev_experience_tool({
+  url,
   fileName,
   services,
   specializations,
   processSteps
 }: {
+  url: string;
   fileName: string;
   services: Service[];
   specializations: string[];
   processSteps: ProcessStep[];
 }): Promise<ToolOutput> {
-  const filePath = getExpFilePath(fileName);
-  const csv = fs.readFileSync(filePath, "utf-8");
+  const csv = await getCsvFile(fileName, url);
 
   const formattedExp = "# Dev Work Experience\n\n" + (await formatCSV(csv, 4));
   const formattedSpecializations = formatSpecializations(specializations);

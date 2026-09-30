@@ -11,7 +11,11 @@
     "build": "tsc && copyfiles -u 2 'src/lib/experience/*.csv' build/lib && chmod 755 build/index.js",
     "start": "node build/index.js",
     "test": "tsx ./src/test.js",
-    "url": "tsx ./src/lib/jobs/script.js"
+    "url": "tsx ./src/lib/jobs/script.js",
+    "cf:deploy": "wrangler deploy",
+    "cf:dev": "wrangler dev",
+    "cf:start": "wrangler dev",
+    "cf-typegen": "wrangler types"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -21,7 +25,8 @@
     "copyfiles": "^2.4.1",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.144.0"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",

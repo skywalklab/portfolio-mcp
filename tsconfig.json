@@ -4,7 +4,7 @@
     "module": "nodenext",
     "target": "esnext",
     "lib": ["esnext", "dom"],
-    "types": ["node"],
+    "types": ["./worker-configuration.d.ts", "node"],
     "sourceMap": false,
     "declaration": false,
     "declarationMap": false,
@@ -18,5 +18,5 @@
     "rootDir": "./src",
     "outDir": "./build"
   },
-  "include": ["src/**/*"]
+  "include": ["worker-configuration.d.ts", "src/**/*"]
 }
