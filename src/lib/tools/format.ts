@@ -1,4 +1,4 @@
-import type { ContactPoint, EducationItem, ExperienceItem, SkillCategory } from "../experience/cv.js";
+import type { ContactPoint, EducationItem, ExperienceItem, SkillCategory } from "../experience/data.js";
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from "../experience/types.js";
 import { processCsvFile } from "./utils.js";
 

@@ -14,7 +14,7 @@ import {
 import type { ToolOutput } from "./types.js";
 import { getCsvFile, toolOutput } from "./utils.js";
 import type { ContactInfo, ProcessStep, Project, Service, TechStack } from "../experience/types.js";
-import type { ContactPoint, EducationItem, ExperienceItem, SkillCategory } from "../experience/cv.js";
+import type { ContactPoint, EducationItem, ExperienceItem, SkillCategory } from "../experience/data.js";
 
 export async function full_experience_tool({ url, fileName }: { url: string; fileName: string }): Promise<ToolOutput> {
   const csv = await getCsvFile(fileName, url);

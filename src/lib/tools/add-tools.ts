@@ -10,7 +10,7 @@ import {
   portfolio_tool,
   skills_tool
 } from "./tools.js";
-import { contactPoints, education, experiences, skillCategories } from "../experience/cv.js";
+import { contactPoints, education, experiences, skillCategories } from "../experience/data.js";
 
 export const get_cv_tool = [
   "get_cv",
