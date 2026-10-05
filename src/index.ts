@@ -13,12 +13,12 @@ app.use(express.json());
 
 const allowedOrigins =
   env.NODE_ENV === "production"
-    ? ["https://skywalklab.com", "https://portfolio.tommy-doak.workers.dev/"]
+    ? ["https://skywalklab.com", "https://portfolio.tommydoak.workers.dev/"]
     : ["http://localhost:3000", "http://localhost:5173"];
 
 const allowedHosts =
   env.NODE_ENV === "production"
-    ? ["portfolio-mcp.tommy-doak.workers.dev"]
+    ? ["portfolio-mcp.tommydoak.workers.dev"]
     : ["localhost:8787", "localhost:3002", "127.0.0.1:3002"];
 
 const URL = env.NODE_ENV === "production" ? "" : "http://localhost:8787";
