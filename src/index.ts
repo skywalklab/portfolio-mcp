@@ -12,7 +12,9 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins =
-  env.NODE_ENV === "production" ? ["https://skywalklab.com"] : ["http://localhost:3000", "http://localhost:5173"];
+  env.NODE_ENV === "production"
+    ? ["https://skywalklab.com", "https://portfolio.tommy-doak.workers.dev/"]
+    : ["http://localhost:3000", "http://localhost:5173"];
 
 const allowedHosts =
   env.NODE_ENV === "production"
