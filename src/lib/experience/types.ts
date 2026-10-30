@@ -39,7 +39,6 @@ export interface ContactInfo {
   email: string;
   linkedin: string;
   website: string;
-  hireMeWebsite: string;
   professionalGithub: string;
   personalGithub: string;
 }

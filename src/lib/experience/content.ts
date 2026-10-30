@@ -545,8 +545,7 @@ export const contactInfo: ContactInfo = {
   phone: "+33751237794",
   email: "tommy.doak@skywalklab.com",
   linkedin: "https://www.linkedin.com/in/tommydoak/",
-  website: "https://skywalklab.com",
-  hireMeWebsite: "https://skywalklab.com/hire-tommy-doak",
+  website: "https://portfolio.tommydoak.workers.dev",
   professionalGithub: "https://github.com/skywalklab",
   personalGithub: "https://github.com/theantidoak"
 };
