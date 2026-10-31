@@ -17,7 +17,7 @@ export interface Project {
   years: string;
   responsibilities: string[];
   tech: string[];
-  results: string;
+  results?: string;
   url?: string;
 }
 

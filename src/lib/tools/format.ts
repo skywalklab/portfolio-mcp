@@ -44,8 +44,7 @@ Url: ${item.url ?? "None"}
 Tagline: ${item.tagline}
 Company Description: ${item.description}
 Responsibilities:\n${markdownList(item.responsibilities)}
-Tech:\n${markdownList(item.tech)}
-Results: ${item.results}`
+Tech:\n${markdownList(item.tech)}${item.results ? `\nResults: ${item.results}` : ""}`
       )
       .join("\n\n")
   );

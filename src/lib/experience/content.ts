@@ -255,24 +255,85 @@ export const projects: Project[] = [
     name: "@skywalklab/lib",
     role: "Full-Stack Developer",
     tagline: "Comprehensive Component Library",
-    description: "Agency-wide reusable Svelte 5 components across all Skywalk Lab projects",
+    description:
+      "The Svelte 5 component library behind my sites, with around 100 components from heroes and carousels to chatbots, animated diagrams and WebGL image effects. Every component is documented in Storybook and also builds as a custom element, so it works on sites that don't use Svelte. Published to npm along with the shared actions, utilities, CSS modules and Vite plugins the components depend on. Built with Svelte 5, TypeScript, Storybook and OGL.",
     years: "'24 - Now",
     responsibilities: [
-      "90+ components across 9+ organized categories (animations, buttons, GDPR, modals, navigation, panels, search, icons, headings)",
+      "Around 100 components, from heroes and carousels to chatbots, animated diagrams and WebGL image effects",
+      "Every component documented in Storybook and also built as a custom element for sites that don't use Svelte",
       "Custom Vite plugins (SEO, icons, vendor)",
       "Multi-stage Docker builds",
       "Actions, utilities, CSS modules, i18n support",
       "GSAP animations, Sentry tracking",
-      "Private GitHub npm registry with automated versioning"
+      "Published to npm with automated versioning"
     ],
-    tech: ["Svelte 5", "TypeScript", "Vite", "GSAP", "Paraglide i18n", "Docker"],
-    results: "40%+ faster development, consistent UX across client sites"
+    tech: ["Svelte 5", "TypeScript", "Storybook", "OGL", "Vite", "GSAP", "Paraglide i18n", "Docker"],
+    results: "40%+ faster development, consistent UX across client sites",
+    url: "https://lab.skywalklab.com"
+  },
+  {
+    name: "Degree Finder",
+    role: "Full-Stack Developer",
+    tagline: "Degree ROI Research Tool",
+    description:
+      "Degree research tool that shows where a degree leads: cost, starting salary, payback time, job growth, top careers and industries, and the schools that offer it. Each search runs more than a dozen PostgreSQL queries in parallel across education, labor and cost-of-living data, then calculates payback times and cost-of-living-adjusted salaries. Built with Svelte 3, TypeScript and Node.js on data from the Bureau of Labor Statistics and the Department of Education.",
+    years: "'21 - '26",
+    responsibilities: [
+      "Shows cost, starting salary, payback time, job growth, top careers and industries, and the schools that offer each degree",
+      "Runs more than a dozen PostgreSQL queries in parallel across education, labor and cost-of-living data",
+      "Calculates payback times and cost-of-living-adjusted salaries"
+    ],
+    tech: ["Svelte 3", "TypeScript", "Node.js", "PostgreSQL"],
+    url: "https://academicinfluence.com/degree-finder"
+  },
+  {
+    name: "College Compare",
+    role: "Full-Stack Developer",
+    tagline: "College Comparison for Web and Mobile",
+    description:
+      "College comparison tool for the web and mobile. Tuition, admissions, test scores, earnings, rankings and even weather, side by side. Built with Svelte 3, TypeScript, Node.js and PostgreSQL on U.S. federal college data, with Capacitor for the mobile app.",
+    years: "'21 - '26",
+    responsibilities: [
+      "Compares tuition, admissions, test scores, earnings, rankings and weather side by side",
+      "Built on U.S. federal college data",
+      "Mobile app built with Capacitor"
+    ],
+    tech: ["Svelte 3", "TypeScript", "Node.js", "PostgreSQL", "Capacitor"],
+    url: "https://academicinfluence.com/college-compare"
+  },
+  {
+    name: "Timeline Video",
+    role: "Full-Stack Developer",
+    tagline: "Animated Ranking Video",
+    description:
+      "Animated video ranking the most influential biologists through history. I built the animation in Svelte 3, with 3D bars that rise and reorder year by year, then recorded it for YouTube.",
+    years: "'21 - '26",
+    responsibilities: [
+      "Animated ranking of the most influential biologists through history",
+      "3D bars that rise and reorder year by year, recorded for YouTube"
+    ],
+    tech: ["Svelte 3"],
+    url: "https://youtube.com/watch?v=zlTXzMcIpjg"
+  },
+  {
+    name: "Football Video",
+    role: "Full-Stack Developer",
+    tagline: "Animated Ranking Video",
+    description:
+      "Animated video of college football champions over the decades, made with the same Svelte 3 timeline. Bars grow and reshuffle as titles are won and conference logos change with each era, recorded for YouTube.",
+    years: "'21 - '26",
+    responsibilities: [
+      "Animated video of college football champions over the decades, made with the same Svelte 3 timeline",
+      "Bars grow and reshuffle as titles are won, and conference logos change with each era, recorded for YouTube"
+    ],
+    tech: ["Svelte 3"],
+    url: "https://youtube.com/watch?v=LI5ymQPvy_s"
   },
   {
     name: "Academic Influence",
     role: "Full-Stack Developer",
     tagline: "Academic Intelligence Platform with Mobile Apps",
-    description: "Large-scale academic ranking and data platform with millions of data points",
+    description: "Academic ranking platform with data on 10,000+ institutions. Interactive comparison tools, millions of data points.",
     years: "'21 - '26",
     responsibilities: [
       "Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions",
@@ -291,10 +352,26 @@ export const projects: Project[] = [
     url: "https://academicinfluence.com"
   },
   {
+    name: "Social Media Video Automation",
+    role: "Full-Stack Developer, Marketing Technology",
+    tagline: "Inkwell Short-Video Pipeline",
+    description:
+      "Automated short-video pipeline for Inkwell's social media. Given a writing topic, a local LLM running in Ollama searches YouTube, reads the transcripts and writes a short script around the most useful tip, with an optional promotional version that ties it to Inkwell's features. Pictory turns the script into a video with stock footage, subtitles and background music. The LLM then rewrites the description for each platform, and the video posts to Facebook, Instagram and YouTube at the same time. Built with Node.js, Express and TypeScript.",
+    years: "'24 - '26",
+    responsibilities: [
+      "Local LLM in Ollama searches YouTube, reads transcripts and writes a short script around the most useful tip",
+      "Optional promotional version that ties the tip to Inkwell's features",
+      "Pictory turns the script into a video with stock footage, subtitles and background music",
+      "LLM rewrites the description per platform and the video posts to Facebook, Instagram and YouTube at the same time"
+    ],
+    tech: ["Node.js", "Express", "TypeScript", "Ollama", "YouTube API", "Pictory API"],
+    url: "https://inkwell.net"
+  },
+  {
     name: "Inkwell",
-    role: "Full-Stack Developer",
+    role: "Full-Stack Developer, Marketing Technology",
     tagline: "AI-Enhanced Academic Publishing Platform",
-    description: "Sophisticated writing platform with AI assistance, document processing, and custom MCP server",
+    description: "Academic writing platform with AI chatbot, marketing pages, and Stripe subscriptions.",
     years: "'24 - '26",
     responsibilities: [
       "Built TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms",
@@ -313,11 +390,54 @@ export const projects: Project[] = [
     url: "https://inkwell.net"
   },
   {
-    name: "Success Portraits",
-    role: "Full-Stack Developer",
-    tagline: "Psychological Assessment & Career Platform",
+    name: "Degree Recommendations",
+    role: "Technical Lead",
+    tagline: "Personality-Based Degree Matching",
     description:
-      "AI-powered assessment platform with custom licensing system, MCP server, and heavily customized WordPress/WooCommerce backend",
+      "For the academic version of the personality test, I matched each student's trait scores to O*NET work styles with a Euclidean distance algorithm, then linked those occupations to degrees through the Bureau of Labor Statistics and IPEDS data behind my Degree Finder. Each recommendation has a \"Why?\" showing the traits behind it. Built with Next.js and TypeScript.",
+    years: "'23 - '26",
+    responsibilities: [
+      "Matched each student's trait scores to O*NET work styles with a Euclidean distance algorithm",
+      "Linked those occupations to degrees through Bureau of Labor Statistics and IPEDS data",
+      "Each recommendation has a \"Why?\" showing the traits behind it"
+    ],
+    tech: ["Next.js", "TypeScript"],
+    url: "https://test.successportraits.com"
+  },
+  {
+    name: "Chatbot",
+    role: "Technical Lead",
+    tagline: "Personality Test Results Chatbot",
+    description:
+      "I built the app in Next.js, TypeScript and PostgreSQL for a personality test designed by Clemson professors, with business and academic versions covering 19 traits across two to four situations and around 10 PDF reports I also built. With that much to take in, I added this AI chatbot, running on a custom MCP server that uses the reports as context, so users can talk through their results and insights.",
+    years: "'23 - '26",
+    responsibilities: [
+      "AI chatbot so users can talk through their personality test results and insights",
+      "Runs on a custom MCP server that uses the PDF reports as context"
+    ],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "MCP"],
+    url: "https://test.successportraits.com"
+  },
+  {
+    name: "PDF Reports",
+    role: "Technical Lead",
+    tagline: "On-Demand Personality Reports",
+    description:
+      "I created 10 report types for the personality test, from trait summaries and coaching reports to manager guides and interview questions, each generated as a PDF on demand. Reports are built in React and rendered with Puppeteer, cached in Redis and bundled into ZIP downloads. One draws Flury-Riedwyl faces, a statistics technique where each trait score shapes a feature of a face. Built with Next.js and TypeScript.",
+    years: "'23 - '26",
+    responsibilities: [
+      "10 report types, from trait summaries and coaching reports to manager guides and interview questions",
+      "Reports built in React, rendered with Puppeteer, cached in Redis and bundled into ZIP downloads",
+      "One report draws Flury-Riedwyl faces, where each trait score shapes a feature of a face"
+    ],
+    tech: ["Next.js", "TypeScript", "React", "Puppeteer", "Redis"],
+    url: "https://test.successportraits.com"
+  },
+  {
+    name: "Success Portraits",
+    role: "Technical Lead",
+    tagline: "Psychological Assessment & Career Platform",
+    description: "AI-powered personality assessment platform. Custom licensing, PDF reports, headless WordPress.",
     years: "'23 - '26",
     responsibilities: [
       "Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL",
@@ -353,10 +473,40 @@ export const projects: Project[] = [
     url: "https://successportraits.com"
   },
   {
+    name: "ViaRoma",
+    role: "Founder & Full-Stack Developer",
+    tagline: "French Long-Distance Walking Blog",
+    description:
+      "French travel blog about long-distance walking. Custom WordPress theme, animated route maps, newsletter.",
+    years: "'26",
+    responsibilities: [
+      "Custom WordPress theme",
+      "Animated route maps",
+      "Newsletter"
+    ],
+    tech: ["WordPress"],
+    url: "https://viaroma.blog"
+  },
+  {
+    name: "Software4Advisors",
+    role: "Founder & Full-Stack Developer",
+    tagline: "Act! CRM Reseller Site",
+    description:
+      "Website for an Act! CRM reseller serving financial advisors. AI chatbot trained on company data, Act! integration, custom WordPress theme.",
+    years: "'26",
+    responsibilities: [
+      "AI chatbot trained on company data",
+      "Act! integration",
+      "Custom WordPress theme"
+    ],
+    tech: ["WordPress"],
+    url: "https://s4a.actforadvisors.com"
+  },
+  {
     name: "Nuisiout",
     role: "Full-Stack Developer",
     tagline: "French Pest Control Service Site",
-    description: "Multilingual service website with SEO optimization",
+    description: "Website for a French pest control company. Service catalogs, contact forms, local SEO.",
     years: "'25 - Now",
     responsibilities: [
       "Built French-language site optimized for local search",
@@ -543,7 +693,7 @@ export const contactInfo: ContactInfo = {
   name: "Thomas Doak",
   preferredName: "Tommy",
   phone: "+33751237794",
-  email: "tommy.doak@skywalklab.com",
+  email: "tcdoak@gmail.com",
   linkedin: "https://www.linkedin.com/in/tommydoak/",
   website: "https://tommydoak.com",
   professionalGithub: "https://github.com/skywalklab",

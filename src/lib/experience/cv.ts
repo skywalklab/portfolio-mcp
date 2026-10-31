@@ -41,7 +41,7 @@ export const contactPoints: ContactPoint[] = [
   {
     type: "Website",
     text: "tommydoak.com",
-    img: "https://skywalklab.com/brand/logo-96.png",
+    img: "https://tommydoak.com/logo-96.png",
     href: "https://tommydoak.com"
   },
   {
