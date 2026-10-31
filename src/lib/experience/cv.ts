@@ -40,9 +40,9 @@ export const contactPoints: ContactPoint[] = [
   { type: "Email", text: "tcdoak@gmail.com", lucide_icon: "mail" },
   {
     type: "Website",
-    text: "portfolio.tommydoak.workers.dev",
+    text: "tommydoak.com",
     img: "https://skywalklab.com/brand/logo-96.png",
-    href: "https://portfolio.tommydoak.workers.dev"
+    href: "https://tommydoak.com"
   },
   {
     type: "LinkedIn",
