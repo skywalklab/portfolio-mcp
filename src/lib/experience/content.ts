@@ -333,7 +333,8 @@ export const projects: Project[] = [
     name: "Academic Influence",
     role: "Full-Stack Developer",
     tagline: "Academic Intelligence Platform with Mobile Apps",
-    description: "Academic ranking platform with data on 10,000+ institutions. Interactive comparison tools, millions of data points.",
+    description:
+      "Academic ranking platform with data on 10,000+ institutions. Interactive comparison tools, millions of data points.",
     years: "'21 - '26",
     responsibilities: [
       "Built interactive college comparison platform with NCES IPEDS data across 10,000+ institutions",
@@ -394,12 +395,12 @@ export const projects: Project[] = [
     role: "Technical Lead",
     tagline: "Personality-Based Degree Matching",
     description:
-      "For the academic version of the personality test, I matched each student's trait scores to O*NET work styles with a Euclidean distance algorithm, then linked those occupations to degrees through the Bureau of Labor Statistics and IPEDS data behind my Degree Finder. Each recommendation has a \"Why?\" showing the traits behind it. Built with Next.js and TypeScript.",
+      'For the academic version of the personality test, I matched each student\'s trait scores to O*NET work styles with a Euclidean distance algorithm, then linked those occupations to degrees through the Bureau of Labor Statistics and IPEDS data behind my Degree Finder. Each recommendation has a "Why?" showing the traits behind it. Built with Next.js and TypeScript.',
     years: "'23 - '26",
     responsibilities: [
       "Matched each student's trait scores to O*NET work styles with a Euclidean distance algorithm",
       "Linked those occupations to degrees through Bureau of Labor Statistics and IPEDS data",
-      "Each recommendation has a \"Why?\" showing the traits behind it"
+      'Each recommendation has a "Why?" showing the traits behind it'
     ],
     tech: ["Next.js", "TypeScript"],
     url: "https://test.successportraits.com"
@@ -479,11 +480,7 @@ export const projects: Project[] = [
     description:
       "French travel blog about long-distance walking. Custom WordPress theme, animated route maps, newsletter.",
     years: "'26",
-    responsibilities: [
-      "Custom WordPress theme",
-      "Animated route maps",
-      "Newsletter"
-    ],
+    responsibilities: ["Custom WordPress theme", "Animated route maps", "Newsletter"],
     tech: ["WordPress"],
     url: "https://viaroma.blog"
   },
@@ -494,11 +491,7 @@ export const projects: Project[] = [
     description:
       "Website for an Act! CRM reseller serving financial advisors. AI chatbot trained on company data, Act! integration, custom WordPress theme.",
     years: "'26",
-    responsibilities: [
-      "AI chatbot trained on company data",
-      "Act! integration",
-      "Custom WordPress theme"
-    ],
+    responsibilities: ["AI chatbot trained on company data", "Act! integration", "Custom WordPress theme"],
     tech: ["WordPress"],
     url: "https://s4a.actforadvisors.com"
   },
@@ -630,7 +623,7 @@ export const processSteps: ProcessStep[] = [
     items: [
       "Svelte 5 component libraries for agency and client work",
       "Organized exports (buttons, animations, modals, navigation, etc.)",
-      "Private npm registries (GitHub Packages)",
+      "Published to npm",
       "Automated versioning and publishing",
       "Watch mode for rapid development",
       "GSAP animations and Lucide icons",

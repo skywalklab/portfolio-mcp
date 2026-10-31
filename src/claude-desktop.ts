@@ -6,7 +6,7 @@ const server = new McpServer({
   name: "portfolio_mcp_server",
   version: "1.0.0"
 });
-addTools(server);
+addTools(server, "");
 
 async function main() {
   const transport = new StdioServerTransport();

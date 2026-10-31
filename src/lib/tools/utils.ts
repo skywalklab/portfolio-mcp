@@ -1,8 +1,13 @@
 import { parse } from "csv-parse/sync";
 import type { ToolOutput } from "./types.js";
-import { env } from "cloudflare:workers";
 
 export async function getCsvFile(fileName: string, url: string): Promise<string> {
+  const { env } = await import("cloudflare:workers").catch(() => ({ env: undefined }));
+  if (!env) {
+    const { readFile } = await import("node:fs/promises");
+    return readFile(new URL(`../../../public/${fileName}`, import.meta.url), "utf-8");
+  }
+
   const res = await env.ASSETS.fetch(new URL(`/${fileName}`, url));
   const csv = await res.text();
 
