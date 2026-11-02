@@ -256,10 +256,10 @@ export const projects: Project[] = [
     role: "Full-Stack Developer",
     tagline: "Comprehensive Component Library",
     description:
-      "The Svelte 5 component library behind my sites, with around 100 components from heroes and carousels to chatbots, animated diagrams and WebGL image effects. Every component is documented in Storybook and also builds as a custom element, so it works on sites that don't use Svelte. Published to npm along with the shared actions, utilities, CSS modules and Vite plugins the components depend on. Built with Svelte 5, TypeScript, Storybook and OGL.",
+      "The Svelte 5 component library behind my sites, with 110 components across 23 categories, from heroes and carousels to chatbots, animated diagrams and WebGL image effects. Every component is documented in Storybook and also builds as a custom element, so it works on sites that don't use Svelte. Published to npm along with the shared actions, utilities, CSS modules and Vite plugins the components depend on. Built with Svelte 5, TypeScript, Storybook and OGL.",
     years: "'24 - Now",
     responsibilities: [
-      "Around 100 components, from heroes and carousels to chatbots, animated diagrams and WebGL image effects",
+      "110 components across 23 categories, from heroes and carousels to chatbots, animated diagrams and WebGL image effects",
       "Every component documented in Storybook and also built as a custom element for sites that don't use Svelte",
       "Custom Vite plugins (SEO, icons, vendor)",
       "Multi-stage Docker builds",
@@ -354,7 +354,7 @@ export const projects: Project[] = [
   },
   {
     name: "Social Media Video Automation",
-    role: "Full-Stack Developer, Marketing Technology",
+    role: "Senior Full-Stack Developer",
     tagline: "Inkwell Short-Video Pipeline",
     description:
       "Automated short-video pipeline for Inkwell's social media. Given a writing topic, a local LLM running in Ollama searches YouTube, reads the transcripts and writes a short script around the most useful tip, with an optional promotional version that ties it to Inkwell's features. Pictory turns the script into a video with stock footage, subtitles and background music. The LLM then rewrites the description for each platform, and the video posts to Facebook, Instagram and YouTube at the same time. Built with Node.js, Express and TypeScript.",
@@ -370,7 +370,7 @@ export const projects: Project[] = [
   },
   {
     name: "Inkwell",
-    role: "Full-Stack Developer, Marketing Technology",
+    role: "Senior Full-Stack Developer",
     tagline: "AI-Enhanced Academic Publishing Platform",
     description: "Academic writing platform with AI chatbot, marketing pages, and Stripe subscriptions.",
     years: "'24 - '26",
@@ -392,7 +392,7 @@ export const projects: Project[] = [
   },
   {
     name: "Degree Recommendations",
-    role: "Technical Lead",
+    role: "Lead Developer",
     tagline: "Personality-Based Degree Matching",
     description:
       'For the academic version of the personality test, I matched each student\'s trait scores to O*NET work styles with a Euclidean distance algorithm, then linked those occupations to degrees through the Bureau of Labor Statistics and IPEDS data behind my Degree Finder. Each recommendation has a "Why?" showing the traits behind it. Built with Next.js and TypeScript.',
@@ -407,7 +407,7 @@ export const projects: Project[] = [
   },
   {
     name: "Chatbot",
-    role: "Technical Lead",
+    role: "Lead Developer",
     tagline: "Personality Test Results Chatbot",
     description:
       "I built the app in Next.js, TypeScript and PostgreSQL for a personality test designed by Clemson professors, with business and academic versions covering 19 traits across two to four situations and around 10 PDF reports I also built. With that much to take in, I added this AI chatbot, running on a custom MCP server that uses the reports as context, so users can talk through their results and insights.",
@@ -421,7 +421,7 @@ export const projects: Project[] = [
   },
   {
     name: "PDF Reports",
-    role: "Technical Lead",
+    role: "Lead Developer",
     tagline: "On-Demand Personality Reports",
     description:
       "I created 10 report types for the personality test, from trait summaries and coaching reports to manager guides and interview questions, each generated as a PDF on demand. Reports are built in React and rendered with Puppeteer, cached in Redis and bundled into ZIP downloads. One draws Flury-Riedwyl faces, a statistics technique where each trait score shapes a feature of a face. Built with Next.js and TypeScript.",
@@ -436,7 +436,7 @@ export const projects: Project[] = [
   },
   {
     name: "Success Portraits",
-    role: "Technical Lead",
+    role: "Lead Developer",
     tagline: "Psychological Assessment & Career Platform",
     description: "AI-powered personality assessment platform. Custom licensing, PDF reports, headless WordPress.",
     years: "'23 - '26",
@@ -452,7 +452,7 @@ export const projects: Project[] = [
       "Enabled AI-powered analysis by developing a custom MCP server integrating test results with LLMs",
       "Developed Euclidean distance algorithms to match user personality profiles with career paths",
       "Improved page load times with Redis caching and PostgreSQL for session and user data",
-      "Managed team of 3 and served as primary liaison with academic partners"
+      "Sole developer; coordinated a team of 3 non-technical staff and served as primary liaison with academic partners"
     ],
     tech: [
       "Next.js",
