@@ -689,6 +689,6 @@ export const contactInfo: ContactInfo = {
   email: "tcdoak@gmail.com",
   linkedin: "https://www.linkedin.com/in/tommydoak/",
   website: "https://tommydoak.com",
-  professionalGithub: "https://github.com/skywalklab",
+  professionalGithub: "https://github.com/skywalklab/skywalklab-lib",
   personalGithub: "https://github.com/theantidoak"
 };
