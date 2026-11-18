@@ -154,7 +154,7 @@ export const experiences: ExperienceItem[] = [
       "Architected TypeScript monorepo with pnpm workspaces and type-safe cross-package imports serving multiple web applications and multi-stage Docker builds.",
       `Built and published an open-source Svelte 5 component library (@skywalklab/lib on npm) with ${componentCount} components across ${categoryCount} categories, custom Vite plugins, bilingual Storybook docs, and framework-agnostic custom elements.`,
       "Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data.",
-      "Built tool-using AI agents with the Vercel AI SDK and MCP for client chat assistants, tailored document generation and website data extraction."
+      "Built tool-using AI agents with the Vercel AI SDK and MCP for client chat assistants, tailored document generation and website data extraction, plus agentic Claude Code workflows with custom skills for lead generation and building personalized websites for prospects."
     ]
   },
   {
