@@ -102,6 +102,7 @@ export const skillCategories: SkillCategory[] = [
       "SQLite",
       "MongoDB",
       "REST APIs",
+      "AI Agents",
       "MCP Servers",
       "Ollama",
       "n8n",
@@ -140,6 +141,8 @@ export const experiences: ExperienceItem[] = [
       "Storybook",
       "Web Components",
       "AI Integration",
+      "AI Agents",
+      "Vercel AI SDK",
       "SQLite",
       "Three.js",
       "GSAP",
@@ -150,7 +153,8 @@ export const experiences: ExperienceItem[] = [
       "Founded a web agency offering custom web apps, AI-powered workflow automations, e-commerce, and multilingual sites.",
       "Architected TypeScript monorepo with pnpm workspaces and type-safe cross-package imports serving multiple web applications and multi-stage Docker builds.",
       `Built and published an open-source Svelte 5 component library (@skywalklab/lib on npm) with ${componentCount} components across ${categoryCount} categories, custom Vite plugins, bilingual Storybook docs, and framework-agnostic custom elements.`,
-      "Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data."
+      "Built lead generation pipeline sourcing from business directories, auditing with Lighthouse + local and cloud AI, and auto-generating personalized demo sites using extracted company data.",
+      "Built tool-using AI agents with the Vercel AI SDK and MCP for client chat assistants, tailored document generation and website data extraction."
     ]
   },
   {
@@ -159,8 +163,7 @@ export const experiences: ExperienceItem[] = [
     skills: ["SvelteKit", "TypeScript", "PostgreSQL", "Vite", "SASS", "MCP"],
     years: "'24 - '26",
     responsibilities: [
-      "Built TypeScript automation pipeline with local open-source AI that queries YouTube API, retrieves transcripts, generates scripts, creates videos via Pictory API, and auto-posts to 3 social media platforms.",
-      "Wrote platform tutorials and built MCP server giving AI assistants access to documentation for user support.",
+      "Built a local open-source AI agent that turns YouTube transcripts into videos via Pictory and auto-posts to 3 social platforms, plus an MCP server giving AI assistants access to platform tutorials I wrote.",
       "Automated B2B outreach pipeline analyzing 800k publisher workflows with AI, generating personalized emails, and exporting to spreadsheets for mass email and LinkedIn campaigns.",
       "Built a shared component library used across 3 Inkwell products (Inkwell, Press, Publishers), ensuring brand consistency and reducing development time."
     ]
@@ -173,7 +176,6 @@ export const experiences: ExperienceItem[] = [
     responsibilities: [
       "Built full-stack personality test platform analyzing 19 traits with Next.js, TypeScript, and PostgreSQL.",
       "Improved page load times with Redis caching and PostgreSQL for session and user data.",
-      "Built 10 PDF report types covering personality insights, coaching, and career matching.",
       "Enabled AI-powered career analysis by developing a custom MCP server integrating test results with LLMs.",
       "Built enterprise licensing system in PHP with master key generation, usage tracking, expiration management, and admin interface.",
       "Sole developer; coordinated a team of 3 non-technical staff and served as primary liaison with academic partners."
